@@ -40,29 +40,29 @@
  },
  {
   "n": 4,
-  "name": "Divya Akula",
-  "role": "Senior Technical Consultant – AI & Microsoft Copilot Solutions",
-  "company": "Sulava MEA",
-  "title": "Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI",
-  "summary": "Most agent demos show what an agent can do. This session shows what it won’t do, and how to prove it: governed multi-agent systems in Copilot Studio with scoped authority, identity-aware access via APIM and Entra ID, and audit-ready Responsible AI controls.",
+  "name": "Erandi Ganepola",
+  "role": "Lead Solutions Engineer - Solutions Architecture",
+  "company": "WSO2 LLC",
+  "title": "One API Endpoint Is Not One MCP Tool: Designing Business Capabilities for AI Agents",
+  "summary": "Learn how to design MCP tools around business capabilities using existing enterprise APIs. Explore when to reuse, adapt, or compose operations, and where business rules and runtime controls belong.",
   "format": "Talk",
   "level": "Intermediate",
   "start": "2026-11-14T05:15:00.000Z",
   "minutes": 35,
-  "photo": "photos/04.jpg"
+  "photo": "photos/07.jpg"
  },
  {
   "n": 5,
-  "name": "Vinoth Rajendran",
-  "role": "Software Developer",
+  "name": "Samik Roy",
+  "role": "Microsoft MVP",
   "company": "",
-  "title": "Building Smarter AI Agents with Microsoft Agent Framework Harness",
-  "summary": "Explore how Microsoft Agent Framework Harness simplifies building intelligent AI agents with planning, context management, tool usage, and multi-step workflows. Learn how to transform basic LLM interactions into autonomous, tool-enabled AI agents.",
+  "title": "Building a Secure Harness for Autonomous AI",
+  "summary": "Learn how to secure autonomous AI agents beyond system prompts using deterministic execution harnesses, Policy-as-Code guardrails, sandboxing, and Human-in-the-Loop approvals.",
   "format": "Talk",
   "level": "Intermediate",
   "start": "2026-11-14T05:50:00.000Z",
   "minutes": 35,
-  "photo": "photos/05.jpg"
+  "photo": "photos/11.jpg"
  },
  {
   "n": 6,
@@ -79,16 +79,16 @@
  },
  {
   "n": 7,
-  "name": "Erandi Ganepola",
-  "role": "Lead Solutions Engineer - Solutions Architecture",
-  "company": "WSO2 LLC",
-  "title": "One API Endpoint Is Not One MCP Tool: Designing Business Capabilities for AI Agents",
-  "summary": "Learn how to design MCP tools around business capabilities using existing enterprise APIs. Explore when to reuse, adapt, or compose operations, and where business rules and runtime controls belong.",
+  "name": "Divya Akula",
+  "role": "Senior Technical Consultant – AI & Microsoft Copilot Solutions",
+  "company": "Sulava MEA",
+  "title": "Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI",
+  "summary": "Most agent demos show what an agent can do. This session shows what it won’t do, and how to prove it: governed multi-agent systems in Copilot Studio with scoped authority, identity-aware access via APIM and Entra ID, and audit-ready Responsible AI controls.",
   "format": "Talk",
   "level": "Intermediate",
   "start": "2026-11-14T07:00:00.000Z",
   "minutes": 35,
-  "photo": "photos/07.jpg"
+  "photo": "photos/04.jpg"
  },
  {
   "n": 8,
@@ -131,16 +131,16 @@
  },
  {
   "n": 11,
-  "name": "Samik Roy",
-  "role": "Microsoft MVP",
+  "name": "Vinoth Rajendran",
+  "role": "Software Developer",
   "company": "",
-  "title": "Building a Secure Harness for Autonomous AI",
-  "summary": "Learn how to secure autonomous AI agents beyond system prompts using deterministic execution harnesses, Policy-as-Code guardrails, sandboxing, and Human-in-the-Loop approvals.",
+  "title": "Building Smarter AI Agents with Microsoft Agent Framework Harness",
+  "summary": "Explore how Microsoft Agent Framework Harness simplifies building intelligent AI agents with planning, context management, tool usage, and multi-step workflows. Learn how to transform basic LLM interactions into autonomous, tool-enabled AI agents.",
   "format": "Talk",
   "level": "Intermediate",
   "start": "2026-11-14T09:20:00.000Z",
   "minutes": 35,
-  "photo": "photos/11.jpg"
+  "photo": "photos/05.jpg"
  },
  {
   "n": 12,

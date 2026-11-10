@@ -4,7 +4,7 @@ Everything is generated from the event data on the website.
 
 1. **Export the data** (from the website repo, with the production secrets; never commit the export) into `.cache/data.json`:
    sessions in schedule order with the speaker's name, headline, job title, company, bio and photo id. Also refresh `sessions.json` (names, titles, times) for the images.
-2. **Download the speaker photos** from the website (`/api/avatar/<user-id>`) into `../photos/NN.jpg` (schedule order) and `.cache/photos/<speaker-name>.png`.
+2. **Download the speaker photos** from the website (`/api/avatar/<user-id>`) into `../photos/` (each speaker's file is set in `sessions.json`) and `.cache/photos/<speaker-name>.png`.
    Put the ITC logo, the lineup poster and the ITC Cat images in `.cache/assets/` (`itc-logo.png`, `poster.png`, `cat-wave.png`, `cat-smile.png`).
 3. **Add or update the speaker intro** in `speakers.js` (one entry per session; `host` is who introduces it). Only use facts from the speaker's own profile.
 4. Build:

@@ -43,7 +43,7 @@ Over more than 16 years in the Microsoft ecosystem, she has moved from SharePoin
 Her session is "Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI". Most agent demos show what an agent can do; Divya will show what it won't do, and how to prove it: scoped authority for each agent, identity-aware access through API Management and Entra ID, human-in-the-loop checkpoints, and decisions that auditors can trace.
 
 Please welcome Divya!` },
-  { host: "Divya Akula", people: [{ name: "Vinoth Rajendran", photo: "vinoth-rajendran", line: "Microsoft AI MVP · Software Developer", chips: ["Microsoft AI MVP"] }],
+  { host: "Prathap Reddy", people: [{ name: "Vinoth Rajendran", photo: "vinoth-rajendran", line: "Microsoft AI MVP · Software Developer", chips: ["Microsoft AI MVP"] }],
     highlights: ["Specialises in Generative AI, Azure AI and intelligent agents", "Expertise in Copilot Studio, Semantic Kernel and .NET", "Regular speaker sharing hands-on demos at community events"],
     script: `Next, please welcome Vinoth Rajendran.
 
@@ -61,7 +61,7 @@ Manimala is an AI systems and product leader, with a career spanning software en
 Her session asks a question every RAG builder should ask: "When Better Retrieval Doesn't Produce Better Answers: Lessons from RAG Evaluation". Manimala ran independent experiments on MS MARCO passages, comparing embedding retrieval with retrieval plus reranking, and measured not just retrieval quality but the answers that came out. The results are surprising, and they will change how you evaluate your own systems.
 
 Please welcome Manimala!` },
-  { host: "Divya Akula", people: [{ name: "Erandi Ganepola", photo: "erandi-ganepola", line: "Lead Solutions Engineer, Solutions Architecture · WSO2", chips: ["~10 yrs APIs", "Co-author"] }],
+  { host: "Prathap Reddy", people: [{ name: "Erandi Ganepola", photo: "erandi-ganepola", line: "Lead Solutions Engineer, Solutions Architecture · WSO2", chips: ["~10 yrs APIs", "Co-author"] }],
     highlights: ["Nearly a decade of enterprise API and integration experience at WSO2", "Works with North American customers on API platforms, integration and cloud-native architectures, including MCP and AI agents", "Co-author of Cells as the Containment Unit for Agentic Systems"],
     script: `Our next speaker joins us from the world of enterprise APIs: Erandi Ganepola.
 
@@ -70,7 +70,7 @@ Erandi is a Lead Solutions Engineer in WSO2's Solutions Architecture team, with 
 Her session is "One API Endpoint Is Not One MCP Tool: Designing Business Capabilities for AI Agents". Wrapping existing APIs as MCP tools is a fast start, but agents explore, chain calls and retry in ways those APIs were never designed for. Erandi will share what she has seen in real customer projects, and how to design capabilities that agents can use well.
 
 Please welcome Erandi!` },
-  { host: "Prathap Reddy", people: [{ name: "Kritika Mehta", photo: "kritika-mehta", line: "Solution Architect · Business Central & AI Architecture", chips: ["15+ yrs Dynamics", "Podcast host"] }],
+  { host: "Divya Akula", people: [{ name: "Kritika Mehta", photo: "kritika-mehta", line: "Solution Architect · Business Central & AI Architecture", chips: ["15+ yrs Dynamics", "Podcast host"] }],
     highlights: ["Solution Architect working with Microsoft Dynamics since the C/SIDE and Classic Client era", "Shares her learning on her YouTube channel, Architect AI Lab", "Hosts the podcast Architects in the AI Era"],
     script: `Please welcome our next speaker, Kritika Mehta.
 
@@ -81,7 +81,7 @@ She explores all of this in public: on her YouTube channel, Architect AI Lab, sh
 Her session is "Rethinking ERP Workflows with Multiple AI Agents: An Azure Logic Apps Experiment". Kritika will demo a solution built with agentic workflows in Azure Logic Apps, with Business Central as the ERP: an orchestrator coordinating specialist agents, while the workflow handles business rules, calculations, approvals and ERP updates.
 
 Kritika, over to you!` },
-  { host: "Divya Akula", people: [{ name: "Shantha Kumar T", photo: "shantha-kumar-t", line: "Microsoft Copilot MVP · CTO, SharePoint Designs", chips: ["Microsoft Copilot MVP", "CTO"] }],
+  { host: "Prathap Reddy", people: [{ name: "Shantha Kumar T", photo: "shantha-kumar-t", line: "Microsoft Copilot MVP · CTO, SharePoint Designs", chips: ["Microsoft Copilot MVP", "CTO"] }],
     highlights: ["19 years in the modern workspace as developer, UI designer and architect", "Chief Technology Officer at SharePoint Designs", "Focused on cloud, modern workspace and AI"],
     script: `Our next speaker is Shantha Kumar T.
 
@@ -90,7 +90,7 @@ Shantha is a Microsoft Copilot MVP and the Chief Technology Officer at SharePoin
 His session is "Beyond the Chatbot: Building Proactive AI Teammates with Copilot Studio". Shantha will show how to move from conversational bots to digital teammates: autonomous agent accounts, business process memory and proactive triggers in Copilot Studio. In his live walkthrough, an agent uses its own identity, reaches out to owners and approvers with @mentions in Teams and Outlook, and pulls their answers into an executive-ready briefing.
 
 Please welcome Shantha!` },
-  { host: "Prathap Reddy", people: [{ name: "Vinit Metange", photo: "vinit-metange", line: "Senior AI Product Manager · Founder, AASA & BEACON AI", chips: ["18 yrs product", "Founder"] }],
+  { host: "Divya Akula", people: [{ name: "Vinit Metange", photo: "vinit-metange", line: "Senior AI Product Manager · Founder, AASA & BEACON AI", chips: ["18 yrs product", "Founder"] }],
     highlights: ["18 years at Nokia, Netcracker, IBM and Wipro: cloud platforms, 5G subscriber data and enterprise GenAI", "Founder of AASA, which runs adversarial security tests against live AI agents, and BEACON AI", "Product Management certificate from Kellogg; Leadership with AI programme from ISB"],
     script: `Our next speaker builds agentic AI that holds up in production: Vinit Metange, joining us from Bengaluru.
 
@@ -108,7 +108,7 @@ Samik is a Microsoft MVP specialising in threat intelligence, Microsoft Sentinel
 His session is "Building a Secure Harness for Autonomous AI". When agents run shell commands, query databases and call internal APIs, system prompts alone cannot keep them safe. Samik will show how a deterministic agent harness, with policy-as-code guardrails, sandboxing and human-in-the-loop controls, protects you against prompt injection, tool hijacking and credential leaks.
 
 Please welcome Samik!` },
-  { host: "Prathap Reddy", people: [{ name: "Lalit Rawat", photo: "lalit-rawat", line: "Microsoft MVP · MCT · CISO, Kanerika", chips: ["Microsoft MVP", "MCT", "CISO"] }],
+  { host: "Divya Akula", people: [{ name: "Lalit Rawat", photo: "lalit-rawat", line: "Microsoft MVP · MCT · CISO, Kanerika", chips: ["Microsoft MVP", "MCT", "CISO"] }],
     highlights: ["Chief Information Security Officer at Kanerika and Distinguished Lead Engineer; 19+ years in Microsoft technologies", "Specialises in Zero Trust, DevSecOps, cloud security, AI governance and enterprise AI architecture", "Helps organisations bridge innovation and security to adopt AI responsibly"],
     script: `Closing our sessions today: Lalit Rawat.
 
