@@ -36,10 +36,10 @@ All times IST. Every slot is **35 minutes: a 30-minute session + 5 minutes of Q&
 |---|---|---|---|
 | 9:00 AM – 9:35 AM | Prathap Reddy | From Idea to Agent: Building Enterprise AI Agents with Microsoft Foundry and Copilot Studio | Live demo · Intermediate |
 | 9:35 AM – 10:10 AM | Janarthanan Selvaraj | Building Intelligent Enterprise AI Agents with Microsoft Foundry and Foundry IQ | Talk · Intermediate |
-| 10:10 AM – 10:45 AM | Sriram Balaji | Build agents using Copilot Studio and Microsoft Foundry | Talk · Beginner |
-| 10:45 AM – 11:20 AM | Erandi Ganepola | One API Endpoint Is Not One MCP Tool: Designing Business Capabilities for AI Agents | Talk · Intermediate |
-| 11:20 AM – 11:55 AM | Samik Roy | Building a Secure Harness for Autonomous AI | Talk · Intermediate |
-| 11:55 AM – 12:30 PM | Divya Akula | Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI | Talk · Intermediate |
+| 10:10 AM – 10:45 AM | Samik Roy | Building a Secure Harness for Autonomous AI | Talk · Intermediate |
+| 10:45 AM – 11:20 AM | Divya Akula | Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI | Talk · Intermediate |
+| 11:20 AM – 11:55 AM | Sriram Balaji | Build agents using Copilot Studio and Microsoft Foundry | Talk · Beginner |
+| 11:55 AM – 12:30 PM | Erandi Ganepola | One API Endpoint Is Not One MCP Tool: Designing Business Capabilities for AI Agents | Talk · Intermediate |
 | 12:30 PM – 1:05 PM | Kritika Mehta | Rethinking ERP Workflows with Multiple AI Agents: An Azure Logic Apps Experiment | Live demo · Intermediate |
 | 1:05 PM – 1:40 PM | Shantha Kumar T | Beyond the Chatbot: Building Proactive AI Teammates with Copilot Studio | Live demo · Intermediate |
 | 1:40 PM – 2:15 PM | Vinit Metange | Red-Team Your Agent Before Your Users Do: Testing and Securing Microsoft Foundry Agents | Talk · Beginner |
@@ -54,10 +54,10 @@ Also available as [`schedule.csv`](schedule.csv) and a calendar file, [`agent-un
 |---|---|---|
 | Prathap Reddy | AI Engineer · Sulava Mea | 9:00 AM |
 | Janarthanan Selvaraj | Senior Manager · Atos | 9:35 AM |
-| Sriram Balaji | Director · Kerv Digital | 10:10 AM |
-| Erandi Ganepola | Lead Solutions Engineer - Solutions Architecture · WSO2 LLC | 10:45 AM |
-| Samik Roy |  | 11:20 AM |
-| Divya Akula | Senior Technical Consultant – AI & Microsoft Copilot Solutions · Sulava MEA | 11:55 AM |
+| Samik Roy |  | 10:10 AM |
+| Divya Akula | Senior Technical Consultant – AI & Microsoft Copilot Solutions · Sulava MEA | 10:45 AM |
+| Sriram Balaji | Director · Kerv Digital | 11:20 AM |
+| Erandi Ganepola | Lead Solutions Engineer - Solutions Architecture · WSO2 LLC | 11:55 AM |
 | Kritika Mehta |  | 12:30 PM |
 | Shantha Kumar T | Chief Technology Officer · SharePoint Designs | 1:05 PM |
 | Vinit Metange | Product Manager | Founder · Beacon AI | AASA | 1:40 PM |
@@ -67,16 +67,17 @@ Also available as [`schedule.csv`](schedule.csv) and a calendar file, [`agent-un
 ## Speaker banners
 
 Every banner comes in three sizes: **Post** (1080 × 1350, LinkedIn and Instagram), **Story** (1080 × 1920, Instagram and WhatsApp status) and **Wide** (1600 × 900, LinkedIn, X and YouTube).
+**Sharing? Tag Innovation Tech Community and use #AgentUniverse2026**, so we can reshare your post.
 The website generates them, so the live version is always at `https://innovationtechcommunity.com/banner/<session-id>.png?size=portrait|story|landscape`.
 
 | Banner | Session |
 |---|---|
 | ![Prathap Reddy](banners/portrait/01-prathap-reddy.png) | **Prathap Reddy**<br>9:00 AM IST<br>From Idea to Agent: Building Enterprise AI Agents with Microsoft Foundry and Copilot Studio<br>[Post](banners/portrait/01-prathap-reddy.png) · [Story](banners/story/01-prathap-reddy.png) · [Wide](banners/landscape/01-prathap-reddy.png) |
 | ![Janarthanan Selvaraj](banners/portrait/02-janarthanan-selvaraj.png) | **Janarthanan Selvaraj**<br>9:35 AM IST<br>Building Intelligent Enterprise AI Agents with Microsoft Foundry and Foundry IQ<br>[Post](banners/portrait/02-janarthanan-selvaraj.png) · [Story](banners/story/02-janarthanan-selvaraj.png) · [Wide](banners/landscape/02-janarthanan-selvaraj.png) |
-| ![Sriram Balaji](banners/portrait/03-sriram-balaji.png) | **Sriram Balaji**<br>10:10 AM IST<br>Build agents using Copilot Studio and Microsoft Foundry<br>[Post](banners/portrait/03-sriram-balaji.png) · [Story](banners/story/03-sriram-balaji.png) · [Wide](banners/landscape/03-sriram-balaji.png) |
-| ![Erandi Ganepola](banners/portrait/04-erandi-ganepola.png) | **Erandi Ganepola**<br>10:45 AM IST<br>One API Endpoint Is Not One MCP Tool: Designing Business Capabilities for AI Agents<br>[Post](banners/portrait/04-erandi-ganepola.png) · [Story](banners/story/04-erandi-ganepola.png) · [Wide](banners/landscape/04-erandi-ganepola.png) |
-| ![Samik Roy](banners/portrait/05-samik-roy.png) | **Samik Roy**<br>11:20 AM IST<br>Building a Secure Harness for Autonomous AI<br>[Post](banners/portrait/05-samik-roy.png) · [Story](banners/story/05-samik-roy.png) · [Wide](banners/landscape/05-samik-roy.png) |
-| ![Divya Akula](banners/portrait/06-divya-akula.png) | **Divya Akula**<br>11:55 AM IST<br>Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI<br>[Post](banners/portrait/06-divya-akula.png) · [Story](banners/story/06-divya-akula.png) · [Wide](banners/landscape/06-divya-akula.png) |
+| ![Samik Roy](banners/portrait/03-samik-roy.png) | **Samik Roy**<br>10:10 AM IST<br>Building a Secure Harness for Autonomous AI<br>[Post](banners/portrait/03-samik-roy.png) · [Story](banners/story/03-samik-roy.png) · [Wide](banners/landscape/03-samik-roy.png) |
+| ![Divya Akula](banners/portrait/04-divya-akula.png) | **Divya Akula**<br>10:45 AM IST<br>Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI<br>[Post](banners/portrait/04-divya-akula.png) · [Story](banners/story/04-divya-akula.png) · [Wide](banners/landscape/04-divya-akula.png) |
+| ![Sriram Balaji](banners/portrait/05-sriram-balaji.png) | **Sriram Balaji**<br>11:20 AM IST<br>Build agents using Copilot Studio and Microsoft Foundry<br>[Post](banners/portrait/05-sriram-balaji.png) · [Story](banners/story/05-sriram-balaji.png) · [Wide](banners/landscape/05-sriram-balaji.png) |
+| ![Erandi Ganepola](banners/portrait/06-erandi-ganepola.png) | **Erandi Ganepola**<br>11:55 AM IST<br>One API Endpoint Is Not One MCP Tool: Designing Business Capabilities for AI Agents<br>[Post](banners/portrait/06-erandi-ganepola.png) · [Story](banners/story/06-erandi-ganepola.png) · [Wide](banners/landscape/06-erandi-ganepola.png) |
 | ![Kritika Mehta](banners/portrait/07-kritika-mehta.png) | **Kritika Mehta**<br>12:30 PM IST<br>Rethinking ERP Workflows with Multiple AI Agents: An Azure Logic Apps Experiment<br>[Post](banners/portrait/07-kritika-mehta.png) · [Story](banners/story/07-kritika-mehta.png) · [Wide](banners/landscape/07-kritika-mehta.png) |
 | ![Shantha Kumar T](banners/portrait/08-shantha-kumar-t.png) | **Shantha Kumar T**<br>1:05 PM IST<br>Beyond the Chatbot: Building Proactive AI Teammates with Copilot Studio<br>[Post](banners/portrait/08-shantha-kumar-t.png) · [Story](banners/story/08-shantha-kumar-t.png) · [Wide](banners/landscape/08-shantha-kumar-t.png) |
 | ![Vinit Metange](banners/portrait/09-vinit-metange.png) | **Vinit Metange**<br>1:40 PM IST<br>Red-Team Your Agent Before Your Users Do: Testing and Securing Microsoft Foundry Agents<br>[Post](banners/portrait/09-vinit-metange.png) · [Story](banners/story/09-vinit-metange.png) · [Wide](banners/landscape/09-vinit-metange.png) |

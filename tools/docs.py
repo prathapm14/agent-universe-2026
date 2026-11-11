@@ -75,6 +75,7 @@ Also available as [`schedule.csv`](schedule.csv) and a calendar file, [`agent-un
 ## Speaker banners
 
 Every banner comes in three sizes: **Post** (1080 × 1350, LinkedIn and Instagram), **Story** (1080 × 1920, Instagram and WhatsApp status) and **Wide** (1600 × 900, LinkedIn, X and YouTube).
+**Sharing? Tag Innovation Tech Community and use #AgentUniverse2026**, so we can reshare your post.
 The website generates them, so the live version is always at `{SITE}/banner/<session-id>.png?size=portrait|story|landscape`.
 
 | Banner | Session |
