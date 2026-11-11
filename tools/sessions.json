@@ -66,19 +66,6 @@
  },
  {
   "n": 6,
-  "name": "Manimala Kumar",
-  "role": "Senior Technical Program Manager",
-  "company": "",
-  "title": "When Better Retrieval Doesn't Produce Better Answers: Lessons from RAG Evaluation",
-  "summary": "This session explores why better retrieval doesn't always produce better answers in RAG systems. Through real evaluation experiments, it highlights the disconnect between retrieval quality and generated answers, and what this means for building more reliable AI assistants and agents.",
-  "format": "Talk",
-  "level": "Intermediate",
-  "start": "2026-11-14T06:25:00.000Z",
-  "minutes": 35,
-  "photo": "photos/06.jpg"
- },
- {
-  "n": 7,
   "name": "Divya Akula",
   "role": "Senior Technical Consultant – AI & Microsoft Copilot Solutions",
   "company": "Sulava MEA",
@@ -86,12 +73,12 @@
   "summary": "Most agent demos show what an agent can do. This session shows what it won’t do, and how to prove it: governed multi-agent systems in Copilot Studio with scoped authority, identity-aware access via APIM and Entra ID, and audit-ready Responsible AI controls.",
   "format": "Talk",
   "level": "Intermediate",
-  "start": "2026-11-14T07:00:00.000Z",
+  "start": "2026-11-14T06:25:00.000Z",
   "minutes": 35,
   "photo": "photos/04.jpg"
  },
  {
-  "n": 8,
+  "n": 7,
   "name": "Kritika Mehta",
   "role": "Solution Architect | Business Central & AI Architecture",
   "company": "",
@@ -99,12 +86,12 @@
   "summary": "A practical exploration of building multi-agent solutions with Azure Logic Apps and Dynamics 365 Business Central, using the orchestrator-workers pattern to bring AI agents and business workflows together.",
   "format": "Demo",
   "level": "Intermediate",
-  "start": "2026-11-14T07:35:00.000Z",
+  "start": "2026-11-14T07:00:00.000Z",
   "minutes": 35,
   "photo": "photos/08.jpg"
  },
  {
-  "n": 9,
+  "n": 8,
   "name": "Shantha Kumar T",
   "role": "Chief Technology Officer",
   "company": "SharePoint Designs",
@@ -112,12 +99,12 @@
   "summary": "This session explores how Microsoft Copilot Studio helps to build persistent agent accounts, \r\nmanage business process memory, and proactive triggers to help teams delegate complex, multi-step workflows.",
   "format": "Demo",
   "level": "Intermediate",
-  "start": "2026-11-14T08:10:00.000Z",
+  "start": "2026-11-14T07:35:00.000Z",
   "minutes": 35,
   "photo": "photos/09.jpg"
  },
  {
-  "n": 10,
+  "n": 9,
   "name": "Vinit Metange",
   "role": "Product Manager | Founder",
   "company": "Beacon AI | AASA",
@@ -125,12 +112,12 @@
   "summary": "AI agents read email, open files and take actions, so one hidden instruction can turn them against you. Watch a Microsoft Foundry agent get hijacked live, an auditor agent attack it over MCP, and a hardened twin block every attack, proven with evaluations and red teaming.",
   "format": "Talk",
   "level": "Beginner",
-  "start": "2026-11-14T08:45:00.000Z",
+  "start": "2026-11-14T08:10:00.000Z",
   "minutes": 35,
   "photo": "photos/10.jpg"
  },
  {
-  "n": 11,
+  "n": 10,
   "name": "Vinoth Rajendran",
   "role": "Software Developer",
   "company": "",
@@ -138,12 +125,12 @@
   "summary": "Explore how Microsoft Agent Framework Harness simplifies building intelligent AI agents with planning, context management, tool usage, and multi-step workflows. Learn how to transform basic LLM interactions into autonomous, tool-enabled AI agents.",
   "format": "Talk",
   "level": "Intermediate",
-  "start": "2026-11-14T09:20:00.000Z",
+  "start": "2026-11-14T08:45:00.000Z",
   "minutes": 35,
   "photo": "photos/05.jpg"
  },
  {
-  "n": 12,
+  "n": 11,
   "name": "Lalit Rawat",
   "role": "CISO",
   "company": "Kanerika",
@@ -151,7 +138,7 @@
   "summary": "AI agents are moving beyond conversational assistants to systems that can access enterprise data, invoke APIs, execute tools, write code, and perform business operations autonomously. But as agent capabilities increase, so do the risks of excessive permissions, prompt injection, sensitive data expos",
   "format": "Talk",
   "level": "Intermediate",
-  "start": "2026-11-14T09:55:00.000Z",
+  "start": "2026-11-14T09:20:00.000Z",
   "minutes": 35,
   "photo": "photos/12.jpg"
  }

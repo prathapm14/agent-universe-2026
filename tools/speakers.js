@@ -52,15 +52,6 @@ Vinoth is a Microsoft AI MVP, a software developer and a passionate technology s
 His session is "Building Smarter AI Agents with Microsoft Agent Framework Harness". Vinoth will show how the Harness helps agents plan tasks, keep context, use tools, run multi-step workflows and ask for human approval, with a practical example that goes from a basic LLM call to an autonomous, tool-enabled agent.
 
 Vinoth, over to you!` },
-  { host: "Prathap Reddy", people: [{ name: "Manimala Kumar", photo: "manimala-kumar", line: "AI Systems & Product Leader · Senior Technical Program Manager", chips: ["AI systems", "Foundation models"] }],
-    highlights: ["Career across software engineering, architecture, product leadership and AI platforms", "At NVIDIA: open foundation models and retrieval, including embedding and reranking models", "Previously at Intel: led AI developer platform and ecosystem products"],
-    script: `Our next speaker brings a systems view of taking AI from research to production: Manimala Kumar.
-
-Manimala is an AI systems and product leader, with a career spanning software engineering, architecture, product leadership and AI platforms. At NVIDIA, her work covers open foundation models and retrieval, including embedding and reranking models and the systems that bring them to developers. Before that, at Intel, she led AI developer platform and ecosystem products across AI software, hardware and deployment environments. She speaks and writes about practical AI and the meeting point of technology and product.
-
-Her session asks a question every RAG builder should ask: "When Better Retrieval Doesn't Produce Better Answers: Lessons from RAG Evaluation". Manimala ran independent experiments on MS MARCO passages, comparing embedding retrieval with retrieval plus reranking, and measured not just retrieval quality but the answers that came out. The results are surprising, and they will change how you evaluate your own systems.
-
-Please welcome Manimala!` },
   { host: "Prathap Reddy", people: [{ name: "Erandi Ganepola", photo: "erandi-ganepola", line: "Lead Solutions Engineer, Solutions Architecture · WSO2", chips: ["~10 yrs APIs", "Co-author"] }],
     highlights: ["Nearly a decade of enterprise API and integration experience at WSO2", "Works with North American customers on API platforms, integration and cloud-native architectures, including MCP and AI agents", "Co-author of Cells as the Containment Unit for Agentic Systems"],
     script: `Our next speaker joins us from the world of enterprise APIs: Erandi Ganepola.

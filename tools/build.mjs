@@ -15,7 +15,7 @@ const FONTS = join(process.env.HOME, "innovationtechcommunity", "public", "fonts
 const url = (path) => pathToFileURL(join(ROOT, path)).href;
 const sessions = JSON.parse(readFileSync(join(ROOT, "tools", "sessions.json"), "utf8"));
 
-const EVENT = { date: "14th NOVEMBER 2026", time: "9:00 AM – 4:00 PM (IST)", place: "VIRTUAL EVENT", link: "innovationtechcommunity.com/agent-universe" };
+const EVENT = { date: "14th NOVEMBER 2026", time: "9:00 AM – 3:25 PM (IST)", place: "VIRTUAL EVENT", link: "innovationtechcommunity.com/agent-universe" };
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const clock = (iso, add = 0) => new Intl.DateTimeFormat("en-IN", { hour: "numeric", minute: "2-digit", timeZone: "Asia/Kolkata" }).format(new Date(new Date(iso).getTime() + add * 60_000)).toUpperCase();
 const slot = (s) => `${clock(s.start)} – ${clock(s.start, s.minutes)}`;
@@ -177,7 +177,7 @@ const eventPoster = (w, h) => {
   <div style="margin-top:${tall ? 50 : 32}px;width:860px;text-align:center;font-size:${tall ? 32 : 28}px;line-height:1.45;font-weight:500;font-style:italic;color:#1e2a55">
     A global gathering for AI builders, creators, and changemakers to explore the next frontier of <b style="color:#4f46e5">Agentic AI</b>.</div>
   <div style="display:flex;gap:22px;margin-top:${tall ? 56 : 34}px">
-    ${[["12", "SESSIONS"], ["12", "SPEAKERS"], ["1", "DAY · LIVE"]].map(([n, t]) => `<div class="card" style="width:230px;padding:22px 0;text-align:center;border-radius:26px">
+    ${[[String(sessions.length), "SESSIONS"], [String(sessions.length), "SPEAKERS"], ["1", "DAY · LIVE"]].map(([n, t]) => `<div class="card" style="width:230px;padding:22px 0;text-align:center;border-radius:26px">
       <div style="font-size:58px;font-weight:800;line-height:1;background:linear-gradient(90deg,#1d4ed8,#a855f7);-webkit-background-clip:text;color:transparent">${n}</div>
       <div style="font-size:18px;font-weight:800;letter-spacing:.2em;margin-top:8px;color:#1e2a55">${t}</div></div>`).join("")}
   </div>
@@ -199,8 +199,8 @@ const lineup = (w, h, cols) => {
   ${wordmark(wide ? 520 : tall ? 720 : 640, wide ? 104 : tall ? 150 : 120)}
   <div style="margin-top:${wide ? 4 : 10}px">${info(wide ? 18 : 21, wide ? 56 : 64)}</div>
   <div style="font-size:${wide ? 22 : 30}px;font-weight:800;letter-spacing:.3em;margin:${wide ? 18 : tall ? 30 : 24}px 0 ${wide ? 14 : 20}px;color:#1e2a55">SPEAKER LINEUP</div>
-  <div style="display:grid;grid-template-columns:repeat(${cols},${tile}px);gap:${wide ? 14 : tall ? 18 : 16}px">
-    ${sessions.map((s) => `<div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:${tall ? 18 : 14}px 10px ${tall ? 16 : 12}px;border-radius:24px">
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;width:${cols * tile + (cols - 1) * (wide ? 14 : tall ? 18 : 16)}px;gap:${wide ? 14 : tall ? 18 : 16}px">
+    ${sessions.map((s) => `<div class="card" style="width:${tile}px;display:flex;flex-direction:column;align-items:center;text-align:center;padding:${tall ? 18 : 14}px 10px ${tall ? 16 : 12}px;border-radius:24px">
       <div class="ring" style="width:${face}px;height:${face}px;padding:5px"><img src="${url(s.photo)}" style="border-width:4px"></div>
       <div class="name" style="font-size:${wide ? 17 : tall ? 23 : 18}px;margin-top:${tall ? 14 : 9}px">${esc(s.name)}</div>
       <div style="font-size:${wide ? 14 : tall ? 18 : 15}px;font-weight:800;margin-top:${tall ? 8 : 5}px;color:#4f46e5">${clock(s.start)}</div></div>`).join("")}

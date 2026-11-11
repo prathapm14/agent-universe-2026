@@ -1,6 +1,6 @@
 # Run of show · Agent Universe 2026
 
-Saturday, 14 November 2026 · 9:00 AM – 4:00 PM IST. Hosts: **Prathap Reddy & Divya Akula**. Each 35-minute slot: **30-minute session + 5 minutes of Q&A** from the chat; a host introduces each speaker (about 1–2 minutes) at the start of the slot.
+Saturday, 14 November 2026 · 9:00 AM – 3:25 PM IST. Hosts: **Prathap Reddy & Divya Akula**. Each 35-minute slot: **30-minute session + 5 minutes of Q&A** from the chat; a host introduces each speaker (about 1–2 minutes) at the start of the slot.
 
 ## Before the day
 
@@ -25,14 +25,13 @@ Saturday, 14 November 2026 · 9:00 AM – 4:00 PM IST. Hosts: **Prathap Reddy & 
 | 10:10 AM – 10:45 AM | Sriram Balaji | Divya Akula | Intro slide 9 · "Build agents using Copilot Studio and Microsoft Foundry" |
 | 10:45 AM – 11:20 AM | Erandi Ganepola | Prathap Reddy | Intro slide 10 · "One API Endpoint Is Not One MCP Tool: Designing Business Capabilities for AI Agents" |
 | 11:20 AM – 11:55 AM | Samik Roy | Divya Akula | Intro slide 11 · "Building a Secure Harness for Autonomous AI" |
-| 11:55 AM – 12:30 PM | Manimala Kumar | Prathap Reddy | Intro slide 12 · "When Better Retrieval Doesn't Produce Better Answers: Lessons from RAG Evaluation" |
-| 12:30 PM – 1:05 PM | Divya Akula | Prathap Reddy | Intro slide 13 · "Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI" |
-| 1:05 PM – 1:40 PM | Kritika Mehta | Divya Akula | Intro slide 14 · "Rethinking ERP Workflows with Multiple AI Agents: An Azure Logic Apps Experiment" |
-| 1:40 PM – 2:15 PM | Shantha Kumar T | Prathap Reddy | Intro slide 15 · "Beyond the Chatbot: Building Proactive AI Teammates with Copilot Studio" |
-| 2:15 PM – 2:50 PM | Vinit Metange | Divya Akula | Intro slide 16 · "Red-Team Your Agent Before Your Users Do: Testing and Securing Microsoft Foundry Agents" |
-| 2:50 PM – 3:25 PM | Vinoth Rajendran | Prathap Reddy | Intro slide 17 · "Building Smarter AI Agents with Microsoft Agent Framework Harness" |
-| 3:25 PM – 4:00 PM | Lalit Rawat | Divya Akula | Intro slide 18 · "Securing AI Agents: From Autonomous Intelligence to Enterprise-Grade Trust" |
-| 4:00 PM | Prathap Reddy & Divya Akula | Both | Close: thank speakers and volunteers, passport stamp, YouTube recordings |
+| 11:55 AM – 12:30 PM | Divya Akula | Prathap Reddy | Intro slide 12 · "Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI" |
+| 12:30 PM – 1:05 PM | Kritika Mehta | Divya Akula | Intro slide 13 · "Rethinking ERP Workflows with Multiple AI Agents: An Azure Logic Apps Experiment" |
+| 1:05 PM – 1:40 PM | Shantha Kumar T | Prathap Reddy | Intro slide 14 · "Beyond the Chatbot: Building Proactive AI Teammates with Copilot Studio" |
+| 1:40 PM – 2:15 PM | Vinit Metange | Divya Akula | Intro slide 15 · "Red-Team Your Agent Before Your Users Do: Testing and Securing Microsoft Foundry Agents" |
+| 2:15 PM – 2:50 PM | Vinoth Rajendran | Prathap Reddy | Intro slide 16 · "Building Smarter AI Agents with Microsoft Agent Framework Harness" |
+| 2:50 PM – 3:25 PM | Lalit Rawat | Divya Akula | Intro slide 17 · "Securing AI Agents: From Autonomous Intelligence to Enterprise-Grade Trust" |
+| 3:25 PM | Prathap Reddy & Divya Akula | Both | Close: thank speakers and volunteers, passport stamp, YouTube recordings |
 
 ## Notes
 

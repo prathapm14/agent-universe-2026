@@ -4,9 +4,9 @@ PRODID:-//Innovation Tech Community//Agent Universe 2026//EN
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 UID:agent-universe-2026@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
+DTSTAMP:20261111T171810Z
 DTSTART:20261114T033000Z
-DTEND:20261114T103000Z
+DTEND:20261114T095500Z
 SUMMARY:Agent Universe 2026
 DESCRIPTION:Free virtual event on Agentic AI by Innovation Tech Community. YouTube live: https://www.youtube.com/live/dGrWyDnP0PE · LinkedIn live: https://www.linkedin.com/events/7520555249288470529/ · https://innovationtechcommunity.com/agent-universe
 LOCATION:Online · https://www.youtube.com/live/dGrWyDnP0PE
@@ -14,7 +14,7 @@ URL:https://innovationtechcommunity.com/agent-universe
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-91134276-82b6-4d20-9904-9fbcd64c5e0c@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
+DTSTAMP:20261111T171810Z
 DTSTART:20261114T033000Z
 DTEND:20261114T040500Z
 SUMMARY:From Idea to Agent: Building Enterprise AI Agents with Microsoft Foundry and Copilot Studio — Prathap Reddy
@@ -23,7 +23,7 @@ LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-7d3cf1ad-d1df-4598-b6b1-a42282c8b610@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
+DTSTAMP:20261111T171810Z
 DTSTART:20261114T040500Z
 DTEND:20261114T044000Z
 SUMMARY:Building Intelligent Enterprise AI Agents with Microsoft Foundry and Foundry IQ — Janarthanan Selvaraj
@@ -32,7 +32,7 @@ LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-6cc0f62a-56d6-4cb6-b960-138e9b72e559@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
+DTSTAMP:20261111T171810Z
 DTSTART:20261114T044000Z
 DTEND:20261114T051500Z
 SUMMARY:Build agents using Copilot Studio and Microsoft Foundry — Sriram Balaji
@@ -41,7 +41,7 @@ LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-72dda6d6-ab2e-449f-befe-8e35b2c459b4@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
+DTSTAMP:20261111T171810Z
 DTSTART:20261114T051500Z
 DTEND:20261114T055000Z
 SUMMARY:One API Endpoint Is Not One MCP Tool: Designing Business Capabilities for AI Agents — Erandi Ganepola
@@ -50,7 +50,7 @@ LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-14604db5-adc0-4e2f-a547-796e4705d5b2@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
+DTSTAMP:20261111T171810Z
 DTSTART:20261114T055000Z
 DTEND:20261114T062500Z
 SUMMARY:Building a Secure Harness for Autonomous AI — Samik Roy
@@ -58,64 +58,55 @@ DESCRIPTION:Agent Universe 2026 · https://innovationtechcommunity.com/agent-uni
 LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
-UID:au-session-9d40f86b-d93f-4f2b-963a-b63c735f6f1e@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
+UID:au-session-b73a160b-5317-49bc-9ddd-ca2f88e38dfb@innovationtechcommunity.com
+DTSTAMP:20261111T171810Z
 DTSTART:20261114T062500Z
 DTEND:20261114T070000Z
-SUMMARY:When Better Retrieval Doesn't Produce Better Answers: Lessons from RAG Evaluation — Manimala Kumar
-DESCRIPTION:Agent Universe 2026 · https://innovationtechcommunity.com/agent-universe
-LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
-END:VEVENT
-BEGIN:VEVENT
-UID:au-session-b73a160b-5317-49bc-9ddd-ca2f88e38dfb@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
-DTSTART:20261114T070000Z
-DTEND:20261114T073500Z
 SUMMARY:Agents That Know Their Limits: Shipping Governed Multi-Agent Systems with Copilot Studio and Azure AI — Divya Akula
 DESCRIPTION:Agent Universe 2026 · https://innovationtechcommunity.com/agent-universe
 LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-6ca4a60d-ae89-4705-9e6d-3907e57b8799@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
-DTSTART:20261114T073500Z
-DTEND:20261114T081000Z
+DTSTAMP:20261111T171810Z
+DTSTART:20261114T070000Z
+DTEND:20261114T073500Z
 SUMMARY:Rethinking ERP Workflows with Multiple AI Agents: An Azure Logic Apps Experiment — Kritika Mehta
 DESCRIPTION:Agent Universe 2026 · https://innovationtechcommunity.com/agent-universe
 LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-31de1257-a5fd-44ff-80b8-847c9260e6bb@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
-DTSTART:20261114T081000Z
-DTEND:20261114T084500Z
+DTSTAMP:20261111T171810Z
+DTSTART:20261114T073500Z
+DTEND:20261114T081000Z
 SUMMARY:Beyond the Chatbot: Building Proactive AI Teammates with Copilot Studio — Shantha Kumar T
 DESCRIPTION:Agent Universe 2026 · https://innovationtechcommunity.com/agent-universe
 LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-6992b65d-0bda-403b-983d-e516d54cf921@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
-DTSTART:20261114T084500Z
-DTEND:20261114T092000Z
+DTSTAMP:20261111T171810Z
+DTSTART:20261114T081000Z
+DTEND:20261114T084500Z
 SUMMARY:Red-Team Your Agent Before Your Users Do: Testing and Securing Microsoft Foundry Agents — Vinit Metange
 DESCRIPTION:Agent Universe 2026 · https://innovationtechcommunity.com/agent-universe
 LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-42d912a1-4f2f-4c5d-86aa-d9b533af54d4@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
-DTSTART:20261114T092000Z
-DTEND:20261114T095500Z
+DTSTAMP:20261111T171810Z
+DTSTART:20261114T084500Z
+DTEND:20261114T092000Z
 SUMMARY:Building Smarter AI Agents with Microsoft Agent Framework Harness — Vinoth Rajendran
 DESCRIPTION:Agent Universe 2026 · https://innovationtechcommunity.com/agent-universe
 LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
 END:VEVENT
 BEGIN:VEVENT
 UID:au-session-04f19d8f-7f2c-495c-8d8c-ad44ab171df9@innovationtechcommunity.com
-DTSTAMP:20261110T150148Z
-DTSTART:20261114T095500Z
-DTEND:20261114T103000Z
+DTSTAMP:20261111T171810Z
+DTSTART:20261114T092000Z
+DTEND:20261114T095500Z
 SUMMARY:Securing AI Agents: From Autonomous Intelligence to Enterprise-Grade Trust — Lalit Rawat
 DESCRIPTION:Agent Universe 2026 · https://innovationtechcommunity.com/agent-universe
 LOCATION:https://www.youtube.com/live/dGrWyDnP0PE
