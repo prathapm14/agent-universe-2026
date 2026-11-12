@@ -228,6 +228,24 @@ const agenda = (w, h) => `<div class="canvas" style="width:${w}px;height:${h}px"
   <div class="foot" style="bottom:40px"><div class="link" style="font-size:24px;padding:18px 36px">Register free · <em>${EVENT.link}</em></div></div>
 </div>`;
 
+// 1080 × 1350 agenda, for LinkedIn and Instagram multi-image posts.
+const agendaPost = () => `<div class="canvas" style="width:1080px;height:1350px">
+  <img class="stage" src="${url("art/stage.png")}" style="height:200px;object-fit:cover;opacity:.8">
+  ${header(72, 34)}
+  ${wordmark(460, 104)}
+  <div style="margin-top:2px">${info(18, 54)}</div>
+  <div style="font-size:22px;font-weight:800;letter-spacing:.3em;margin:16px 0 12px;color:#1e2a55">AGENDA</div>
+  <div class="card" style="width:1000px;padding:8px 26px">
+    ${sessions.map((s, i) => `<div style="display:flex;align-items:center;gap:16px;padding:7px 0;${i ? "border-top:1.5px solid #e4e8f6" : ""}">
+      <div style="width:96px;flex:none;font-size:17px;font-weight:800;color:#4f46e5">${clock(s.start)}</div>
+      <div class="ring" style="width:50px;height:50px;padding:3px"><img src="${url(s.photo)}" style="border-width:2px"></div>
+      <div style="min-width:0"><div style="font-size:16px;font-weight:800;line-height:1.22;width:760px">${esc(s.title)}</div>
+        <div style="font-size:14px;font-weight:700;color:#4b5875;margin-top:2px">${esc(s.name)}<span style="font-weight:500"> · ${esc(s.format)}</span></div></div></div>`).join("")}
+  </div>
+  <div class="foot" style="bottom:96px">${hosts(17)}</div>
+  <div class="foot" style="bottom:24px"><div class="link" style="font-size:20px;padding:14px 30px">Register free · <em>${EVENT.link}</em></div></div>
+</div>`;
+
 const jobs = [];
 for (const s of sessions) {
   jobs.push([`tools/.cache/preview/portrait/${slug(s)}.png`, 1080, 1350, portrait(s)]);
@@ -242,6 +260,7 @@ jobs.push(["posters/agent-universe-lineup-portrait.png", 1080, 1350, lineup(1080
 jobs.push(["posters/agent-universe-lineup-story.png", 1080, 1920, lineup(1080, 1920, 3)]);
 jobs.push(["posters/agent-universe-lineup-landscape.png", 1600, 900, lineup(1600, 900, 6)]);
 jobs.push(["posters/agent-universe-agenda-story.png", 1080, 1920, agenda(1080, 1920)]);
+jobs.push(["posters/agent-universe-agenda-portrait.png", 1080, 1350, agendaPost()]);
 
 const only = process.argv[2];
 const browser = await chromium.launch({ channel: "chrome" });
