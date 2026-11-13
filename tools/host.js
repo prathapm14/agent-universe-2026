@@ -52,6 +52,34 @@ const span = (s) => `${time(s.start)} – ${time(new Date(new Date(s.start).getT
   s.addNotes(`[Prathap & Divya] Welcome everyone to Agent Universe 2026! Introduce yourselves as today's hosts, thank everyone for joining live on YouTube and LinkedIn, and set the tone: a full day of practical sessions from ${people} speakers, ${mvps} of them Microsoft MVPs.`);
 
   s = pres.addSlide({ masterName: "Content", sectionTitle: "Opening" });
+  s.addText("About Innovation Tech Community", { placeholder: "title" });
+  s.addText("Learn together. Build together. Grow together.", { x: 0.6, y: 1.5, w: 7.6, h: 0.6, fontSize: 22, italic: true, color: C.accent2, margin: 0, isTextBox: true });
+  s.addText([
+    { text: "An open, independent community for technology enthusiasts, started in Bengaluru", options: { bullet: true, breakLine: true } },
+    { text: "Meetups, workshops and summits, online and in person", options: { bullet: true, breakLine: true } },
+    { text: "A stage for first-time and experienced speakers alike", options: { bullet: true, breakLine: true } },
+    { text: "Your own learning passport with badges and stamps", options: { bullet: true } }],
+    { x: 0.6, y: 2.3, w: 7.4, h: 2.2, fontSize: 18, color: C.text1, paraSpaceAfter: 8, valign: "top", margin: 0, isTextBox: true });
+  s.addText("FOUNDED BY", { x: 0.6, y: 4.75, w: 4, h: 0.35, fontSize: 12, bold: true, color: C.accent5, charSpacing: 4, margin: 0, isTextBox: true });
+  ["Prathap Reddy", "Divya Akula", "Sujith Sukumaran", "Lingaraj Benni"].forEach((name, i) => {
+    const x = 0.6 + i * 1.9;
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 5.2, w: 1.75, h: 0.6, rectRadius: 0.3, fill: { color: C.background2 }, line: { type: "none" }, objectName: `Founder ${i + 1}` });
+    s.addText(name, { x, y: 5.2, w: 1.75, h: 0.6, fontSize: 13, bold: true, color: C.text2, align: "center", valign: "middle", margin: 0, isTextBox: true });
+  });
+  s.addImage({ path: A("cat-wave.png"), x: 8.9, y: 1.4, w: 3.8, h: 3.8, objectName: "ITC Cat mascot" });
+  s.addText("Say hi to ITC Cat, our mascot! 🐾", { x: 8.6, y: 5.35, w: 4.4, h: 0.5, fontSize: 14, color: C.accent5, align: "center", margin: 0, isTextBox: true });
+  s.addNotes(`[Prathap · about 2 minutes] Before we meet our speakers, a few words about who we are.
+
+Innovation Tech Community, or ITC, is an open and independent community for technology enthusiasts that started in Bengaluru. Our motto is simple: learn together, build together, grow together.
+
+We run meetups, hands-on workshops and summits, both online and in person, and we give a stage to first-time speakers as well as experienced experts. Agent Universe 2026 is our global, virtual day on Agentic AI.
+
+ITC was founded by Prathap Reddy, Divya Akula, Sujith Sukumaran and Lingaraj Benni, and it runs on the energy of our volunteers, speakers and members.
+
+Every member gets a Learning Passport on innovationtechcommunity.com, where you collect a stamp for every ITC event you join. If you registered for today, your Agent Universe 2026 stamp is waiting for you; we'll show you how to claim it at the end.
+
+And meet ITC Cat, our mascot! Follow us and join the community at innovationtechcommunity.com.`);
+  s = pres.addSlide({ masterName: "Content", sectionTitle: "Opening" });
   s.addText("Your hosts today", { placeholder: "title" });
   [["prathap-reddy", "Prathap Reddy", "Founder, Innovation Tech Community", "Microsoft AI MVP · AI Engineer, Sulava Mea"],
    ["divya-akula", "Divya Akula", "Co-founder, Innovation Tech Community", "Microsoft MVP (Copilot Studio) · Responsible AI Architect"]].forEach(([photo, name, role, line], i) => {
@@ -79,25 +107,6 @@ const span = (s) => `${time(s.start)} – ${time(new Date(new Date(s.start).getT
     s.addText(copy, { x: x + 0.3, y: 3.85, w: 2.3, h: 1.8, fontSize: 15, color: C.accent5, valign: "top", margin: 0, isTextBox: true });
   });
   s.addNotes("Quick housekeeping: questions in the chat, share with #AgentUniverse2026, registered attendees can claim their passport stamp, and every session will be on YouTube afterwards.");
-
-  s = pres.addSlide({ masterName: "Content", sectionTitle: "Opening" });
-  s.addText("About Innovation Tech Community", { placeholder: "title" });
-  s.addText("Learn together. Build together. Grow together.", { x: 0.6, y: 1.5, w: 7.6, h: 0.6, fontSize: 22, italic: true, color: C.accent2, margin: 0, isTextBox: true });
-  s.addText([
-    { text: "An open, independent community for technology enthusiasts, started in Bengaluru", options: { bullet: true, breakLine: true } },
-    { text: "Meetups, workshops and summits, online and in person", options: { bullet: true, breakLine: true } },
-    { text: "A stage for first-time and experienced speakers alike", options: { bullet: true, breakLine: true } },
-    { text: "Your own learning passport with badges and stamps", options: { bullet: true } }],
-    { x: 0.6, y: 2.3, w: 7.4, h: 2.2, fontSize: 18, color: C.text1, paraSpaceAfter: 8, valign: "top", margin: 0, isTextBox: true });
-  s.addText("FOUNDED BY", { x: 0.6, y: 4.75, w: 4, h: 0.35, fontSize: 12, bold: true, color: C.accent5, charSpacing: 4, margin: 0, isTextBox: true });
-  ["Prathap Reddy", "Divya Akula", "Sujith Sukumaran", "Lingaraj Benni"].forEach((name, i) => {
-    const x = 0.6 + i * 1.9;
-    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 5.2, w: 1.75, h: 0.6, rectRadius: 0.3, fill: { color: C.background2 }, line: { type: "none" }, objectName: `Founder ${i + 1}` });
-    s.addText(name, { x, y: 5.2, w: 1.75, h: 0.6, fontSize: 13, bold: true, color: C.text2, align: "center", valign: "middle", margin: 0, isTextBox: true });
-  });
-  s.addImage({ path: A("cat-wave.png"), x: 8.9, y: 1.4, w: 3.8, h: 3.8, objectName: "ITC Cat mascot" });
-  s.addText("Say hi to ITC Cat, our mascot! 🐾", { x: 8.6, y: 5.35, w: 4.4, h: 0.5, fontSize: 14, color: C.accent5, align: "center", margin: 0, isTextBox: true });
-  s.addNotes("Introduce Innovation Tech Community in a few lines: an open, independent community started in Bengaluru. Mention the founders and invite people to join the WhatsApp community and create a member account for the learning passport.");
 
   s = pres.addSlide({ masterName: "Content", sectionTitle: "Opening" });
   s.addText("Today at a glance", { placeholder: "title" });
@@ -146,16 +155,40 @@ const span = (s) => `${time(s.start)} – ${time(new Date(new Date(s.start).getT
     const hy = cardY + 2.1;
     s.addText(intro.highlights.slice(0, pair ? 4 : 3).map((t, k, all) => ({ text: t, options: { bullet: true, breakLine: k < all.length - 1 } })),
       { x: X, y: hy, w: W, h: 6.7 - hy, fontSize: 14, color: C.text1, paraSpaceAfter: 6, valign: "top", margin: 0, isTextBox: true, fit: "shrink" });
-    s.addNotes(`[About 2 minutes · Host: ${intro.host}]\n\n${intro.script}`);
+    const clean = (t) => (t || "").replace(/\r/g, "").trim();
+    const reminder = [3, 6, 9].includes(i) ? `\n\n[Quick reminder before the intro] Registered for Agent Universe 2026? Sign in at innovationtechcommunity.com with the same email you registered with, open your Passport and claim your Agent Universe 2026 stamp.` : "";
+    s.addNotes(`[About 2 minutes · Host: ${intro.host}]${reminder}\n\nINTRO SCRIPT\n${intro.script}\n\n────────\nFULL BIO (${intro.people.map((p) => p.name).join(" & ")})\n${clean(session.bio)}\n\n────────\nSESSION: ${session.title}\n${clean(session.summary)}\n\n${clean(session.abstract)}\n\n────────\nAFTER THE SESSION: thank the speaker, read 1-2 questions from the chat, and hand over to the next host.`);
   });
 
   pres.addSection({ title: "Closing" });
+  s = pres.addSlide({ masterName: "Content", sectionTitle: "Closing" });
+  s.addText("Claim your Agent Universe 2026 stamp", { placeholder: "title" });
+  s.addText("Every registered attendee gets the Agent Universe 2026 stamp in their ITC Learning Passport.", { x: 0.6, y: 1.45, w: 12.1, h: 0.5, fontSize: 18, color: C.accent5, margin: 0, isTextBox: true });
+  [["globe", "Sign in", "Go to innovationtechcommunity.com and sign in with Google or GitHub, using the same email you registered with."],
+   ["passport", "Open your Passport", "Click Passport on the website and tap the cover to open your Learning Passport."],
+   ["bulb", "Claim your stamp", "You'll see \"You're registered! Claim your attendee stamp.\" Click Claim, and the stamp is yours."]].forEach(([icon, head, copy], i) => {
+    const x = 0.6 + i * 4.1;
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: 2.2, w: 3.85, h: 3.5, rectRadius: 0.15, fill: { color: C.background2 }, line: { type: "none" }, objectName: `Claim step ${i + 1}` });
+    s.addShape(pres.shapes.OVAL, { x: x + 0.35, y: 2.5, w: 0.95, h: 0.95, fill: { color: [C.accent1, C.accent2, C.accent3][i] }, line: { type: "none" }, objectName: `Claim icon circle ${i + 1}` });
+    s.addImage({ path: IMG(`ic-${icon}-w.png`), x: x + 0.59, y: 2.74, w: 0.47, h: 0.47, objectName: `Claim icon ${i + 1}` });
+    s.addText(`${i + 1}. ${head}`, { x: x + 0.35, y: 3.65, w: 3.2, h: 0.55, fontSize: 22, bold: true, color: C.text1, fontFace: THEME.headFontFace, margin: 0, isTextBox: true });
+    s.addText(copy, { x: x + 0.35, y: 4.25, w: 3.2, h: 1.35, fontSize: 15, color: C.text1, valign: "top", margin: 0, isTextBox: true });
+  });
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: 0.6, y: 5.95, w: 12.1, h: 0.7, rectRadius: 0.12, fill: { color: C.text2 }, line: { type: "none" }, objectName: "Claim banner" });
+  s.addText("innovationtechcommunity.com  ·  Passport  ·  Claim  ·  Speakers get their speaker stamp automatically", { x: 0.6, y: 5.95, w: 12.1, h: 0.7, fontSize: 17, bold: true, color: C.background1, align: "center", valign: "middle", margin: 0, isTextBox: true });
+  s.addNotes(`[Divya · about 1 minute] Before we close: everyone who registered for Agent Universe 2026 can claim the Agent Universe 2026 stamp in their ITC Learning Passport.
+
+Step 1: go to innovationtechcommunity.com and sign in with Google or GitHub. Use the same email address you registered with; that is how the site knows you registered.
+Step 2: click Passport on the website and tap the cover to open it.
+Step 3: you'll see "You're registered! Claim your attendee stamp." Click Claim.
+
+Speakers: your speaker stamp is added automatically. Please claim your stamp today and share your passport on LinkedIn with #AgentUniverse2026!`);
   s = pres.addSlide({ masterName: "Dark title", sectionTitle: "Closing" });
   s.addText("Thank you!", { placeholder: "title" });
   s.addText([{ text: "Claim your passport stamp at innovationtechcommunity.com", options: { breakLine: true } }, { text: "Recordings: youtube.com/@innovationtechcommunity", options: { breakLine: true } },
     { text: "Hosted by Prathap Reddy & Divya Akula · innovationtechcommunity.com" }], { placeholder: "body" });
   s.addImage({ path: A("cat-smile.png"), x: 8.6, y: 1.5, w: 3.9, h: 3.9, objectName: "ITC Cat thumbs up" });
-  s.addNotes("[Prathap & Divya] Thank every speaker by name, the audience and the volunteers. Remind people to claim their passport stamp, that recordings are on YouTube, and invite everyone to join the community at innovationtechcommunity.com for the next event.");
+  s.addNotes("[Prathap & Divya] Thank every speaker by name, the audience and the volunteers. Remind every registrant once more to claim the Agent Universe 2026 stamp in their Learning Passport (sign in with the registration email → Passport → Claim), that recordings are on YouTube, and invite everyone to join the community at innovationtechcommunity.com for the next event.");
 
   const out = path.join(__dirname, "..", "slides", "agent-universe-2026-host-deck.pptx");
   await pres.writeFile({ fileName: out });
