@@ -94,6 +94,10 @@ The website generates them, so the live version is always at `https://innovation
 | [`posters/agent-universe-lineup-story.png`](posters/agent-universe-lineup-story.png) | Speaker lineup · 1080 × 1920 |
 | [`posters/agent-universe-lineup-landscape.png`](posters/agent-universe-lineup-landscape.png) | Speaker lineup · 1600 × 900 |
 | [`posters/agent-universe-agenda-story.png`](posters/agent-universe-agenda-story.png) | Agenda · 1080 × 1920 |
+| [`posters/agent-universe-agenda-portrait.png`](posters/agent-universe-agenda-portrait.png) | Agenda · 1080 × 1350 |
+| [`posters/agent-universe-thank-you-portrait.png`](posters/agent-universe-thank-you-portrait.png) | Thank-you poster · 1080 × 1350 |
+| [`posters/agent-universe-thank-you-story.png`](posters/agent-universe-thank-you-story.png) | Thank-you poster · 1080 × 1920 |
+| [`posters/agent-universe-thank-you-letter.png`](posters/agent-universe-thank-you-letter.png) | Thank-you letter · 1080 × 1350 |
 
 ## Slides
 
