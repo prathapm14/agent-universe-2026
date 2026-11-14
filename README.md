@@ -98,6 +98,7 @@ The website generates them, so the live version is always at `https://innovation
 | [`posters/agent-universe-thank-you-portrait.png`](posters/agent-universe-thank-you-portrait.png) | Thank-you poster · 1080 × 1350 |
 | [`posters/agent-universe-thank-you-story.png`](posters/agent-universe-thank-you-story.png) | Thank-you poster · 1080 × 1920 |
 | [`posters/agent-universe-thank-you-letter.png`](posters/agent-universe-thank-you-letter.png) | Thank-you letter · 1080 × 1350 |
+| [`posters/agent-universe-youtube-thumbnail.png`](posters/agent-universe-youtube-thumbnail.png) | YouTube thumbnail for the recording · 1280 × 720 |
 
 ## Slides
 
@@ -105,6 +106,8 @@ The website generates them, so the live version is always at `https://innovation
 |---|---|
 | [`slides/agent-universe-2026-speaker-template.pptx`](slides/agent-universe-2026-speaker-template.pptx) | Branded slide template for speakers: title, about me, agenda, section divider, text and picture, code or demo, key takeaways and thank-you layouts |
 | [`slides/agent-universe-2026-host-deck.pptx`](slides/agent-universe-2026-host-deck.pptx) | Host deck for Prathap Reddy & Divya Akula: welcome, your hosts, housekeeping, about ITC, the day at a glance, agenda, one intro slide per session (a ~2-minute intro script and the presenting host in the speaker notes) and the closing slide |
+| [`slides/agent-universe-2026-closing.pptx`](slides/agent-universe-2026-closing.pptx) | Closing deck: thank-you, speakers, recap, thank-you letter, posters, passport stamp, stay connected (closing script in the notes) |
+| [`slides/prathap-reddy-from-idea-to-agent.pptx`](slides/prathap-reddy-from-idea-to-agent.pptx) | Prathap Reddy's session deck: From Idea to Agent (20 slides) |
 
 To rebuild the images and decks after a change, see [`tools/README.md`](tools/README.md).
 
