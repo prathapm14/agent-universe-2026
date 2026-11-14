@@ -359,28 +359,29 @@ const thankYouLetter = () => {
 </div>`;
 };
 
-// YouTube thumbnail for the full recording (1280 × 720).
-const ytThumb = () => `<div class="canvas" style="width:1280px;height:720px;align-items:flex-start">
-  <img class="stage" src="${url("art/stage.png")}" style="height:230px;object-fit:cover;opacity:.55">
-  <div style="position:absolute;inset:0;background:radial-gradient(60% 70% at 100% 30%,rgba(168,85,247,.28),transparent 70%)"></div>
-  <div style="position:absolute;left:44px;top:34px" class="brand"><div class="brand" style="font-size:66px;gap:12px"><img src="${url("art/logo.png")}"><div><b>INNOVATION</b><b>TECH COMMUNITY</b></div></div></div>
-  <div class="ms" style="position:absolute;right:44px;top:46px;font-size:30px"><i><span></span><span></span><span></span><span></span></i>Microsoft</div>
-  <div style="position:absolute;left:44px;top:120px;width:640px">
-    <img src="${url("art/wordmark.png")}" style="width:520px;margin-left:-14px">
-    <div style="display:flex;align-items:center;gap:14px;margin-top:6px">
-      <span style="display:inline-flex;align-items:center;gap:10px;background:#dc2626;color:#fff;font-size:30px;font-weight:800;letter-spacing:.06em;padding:10px 22px;border-radius:14px;box-shadow:0 10px 24px rgba(220,38,38,.35)"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5v14l11-7z" fill="#fff"/></svg>FULL EVENT</span>
-      <span style="font-size:34px;font-weight:800;color:#0b1630">2026</span></div>
-    <div style="font-size:50px;font-weight:800;line-height:1.05;margin-top:18px;color:#0b1630">${DELIVERED.length} Sessions on<br><span style="background:linear-gradient(90deg,#1d4ed8,#7c3aed 55%,#d946ef);-webkit-background-clip:text;color:transparent">AI Agents</span></div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;width:600px">
-      ${["Microsoft Foundry", "Copilot Studio", "MCP", "Agent Framework", "AI Security"].map((t, i) => `<span style="font-size:19px;font-weight:800;color:#fff;padding:7px 15px;border-radius:999px;background:${["#2563eb", "#7c3aed", "#c026d3", "#0ea5e9", "#f59e0b"][i]}">${t}</span>`).join("")}</div>
+// YouTube thumbnail for the full recording (1280 × 720): dark, bold, faces.
+const ytThumb = () => {
+  const rows = [DELIVERED.slice(0, 4), DELIVERED.slice(4, 7), DELIVERED.slice(7)];
+  const face = 132;
+  return `<div class="canvas" style="width:1280px;height:720px;align-items:flex-start;background:linear-gradient(135deg,#0b0c3a 0%,#1e1b6e 50%,#4c1d95 100%)">
+  <div style="position:absolute;inset:0;background:radial-gradient(42% 60% at 76% 50%,rgba(192,38,211,.55),transparent 70%),radial-gradient(40% 50% at 8% 100%,rgba(37,99,235,.45),transparent 70%)"></div>
+  <img src="${url("art/stage.png")}" style="position:absolute;left:0;bottom:0;width:100%;height:220px;object-fit:cover;opacity:.22;mix-blend-mode:screen">
+  <div style="position:absolute;left:46px;top:38px;display:flex;align-items:center;gap:12px"><img src="${url("art/logo.png")}" style="width:62px;height:62px">
+    <div style="color:#fff;font-weight:800;line-height:1.05;font-size:22px;letter-spacing:.02em">INNOVATION<br>TECH COMMUNITY</div></div>
+  <div style="position:absolute;left:46px;top:150px">
+    <div style="position:absolute;left:330px;top:-34px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#93c5fd,#2563eb 35%,#4c1d95 70%,#c026d3);box-shadow:0 0 70px rgba(192,38,211,.7)"></div>
+    <div style="position:absolute;left:290px;top:18px;width:220px;height:34px;border-radius:50%;border:4px solid rgba(240,171,252,.85);transform:rotate(-14deg)"></div>
+    <div style="position:relative;font-size:118px;font-weight:800;line-height:.92;letter-spacing:-.02em;color:#fff;text-shadow:0 8px 30px rgba(0,0,0,.35)">AGENT<br>UNIVERSE</div>
+    <div style="position:relative;font-size:96px;font-weight:800;line-height:1;letter-spacing:-.01em;margin-top:6px;background:linear-gradient(90deg,#60a5fa,#c084fc 50%,#f0abfc);-webkit-background-clip:text;color:transparent">2026</div>
+    <div style="display:inline-flex;align-items:center;gap:12px;margin-top:22px;background:#ef4444;color:#fff;font-size:36px;font-weight:800;letter-spacing:.05em;padding:12px 28px 12px 20px;border-radius:16px;box-shadow:0 12px 30px rgba(239,68,68,.45)">
+      <svg viewBox="0 0 24 24" width="38" height="38"><path d="M7 4.5v15l12.5-7.5z" fill="#fff"/></svg>FULL EVENT</div>
   </div>
-  <div style="position:absolute;right:34px;top:150px;width:590px;display:grid;grid-template-columns:repeat(5,1fr);gap:22px 6px;justify-items:center">
-    ${DELIVERED.map((s) => `<div style="display:flex;flex-direction:column;align-items:center;width:114px">
-      <div class="ring" style="width:108px;height:108px;padding:4px"><img src="${url(s.photo)}" style="border-width:3px"></div>
-      <div style="font-size:15px;font-weight:800;margin-top:6px;text-align:center;line-height:1.1;color:#0b1630">${esc(s.name.replace(/ T$/, ""))}</div></div>`).join("")}
+  <div style="position:absolute;right:44px;top:92px;width:600px;display:flex;flex-direction:column;align-items:center;gap:8px">
+    ${rows.map((r) => `<div style="display:flex;gap:16px">${r.map((s) => `<div class="ring" style="width:${face}px;height:${face}px;padding:5px;background:linear-gradient(135deg,#60a5fa,#a855f7 55%,#f0abfc);box-shadow:0 10px 30px rgba(0,0,0,.4)"><img src="${url(s.photo)}" style="border:4px solid #1e1b6e"></div>`).join("")}</div>`).join("")}
+    <div style="margin-top:14px;font-size:30px;font-weight:800;color:#fff;letter-spacing:.14em">${DELIVERED.length} SPEAKERS <span style="color:#f0abfc">·</span> 1 DAY</div>
   </div>
-  <div style="position:absolute;right:40px;bottom:30px;width:580px;text-align:center;font-size:24px;font-weight:800;color:#fff;background:#0b1630;border-radius:999px;padding:13px 0;box-shadow:0 10px 26px rgba(11,22,48,.3)">${DELIVERED.length} expert speakers · <span style="background:linear-gradient(90deg,#93c5fd,#f0abfc);-webkit-background-clip:text;color:transparent">Talks &amp; live demos</span></div>
 </div>`;
+};
 
 const jobs = [];
 for (const s of sessions) {
