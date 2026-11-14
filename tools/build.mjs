@@ -359,27 +359,27 @@ const thankYouLetter = () => {
 </div>`;
 };
 
-// YouTube thumbnail for the full recording (1280 × 720): dark, bold, faces.
+// YouTube thumbnail for the full recording (1280 × 720), in the poster theme.
 const ytThumb = () => {
   const rows = [DELIVERED.slice(0, 4), DELIVERED.slice(4, 7), DELIVERED.slice(7)];
-  const face = 132;
-  return `<div class="canvas" style="width:1280px;height:720px;align-items:flex-start;background:linear-gradient(135deg,#0b0c3a 0%,#1e1b6e 50%,#4c1d95 100%)">
-  <div style="position:absolute;inset:0;background:radial-gradient(42% 60% at 76% 50%,rgba(192,38,211,.55),transparent 70%),radial-gradient(40% 50% at 8% 100%,rgba(37,99,235,.45),transparent 70%)"></div>
-  <img src="${url("art/stage.png")}" style="position:absolute;left:0;bottom:0;width:100%;height:220px;object-fit:cover;opacity:.22;mix-blend-mode:screen">
-  <div style="position:absolute;left:46px;top:38px;display:flex;align-items:center;gap:12px"><img src="${url("art/logo.png")}" style="width:62px;height:62px">
-    <div style="color:#fff;font-weight:800;line-height:1.05;font-size:22px;letter-spacing:.02em">INNOVATION<br>TECH COMMUNITY</div></div>
-  <div style="position:absolute;left:46px;top:150px">
-    <div style="position:absolute;left:330px;top:-34px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#93c5fd,#2563eb 35%,#4c1d95 70%,#c026d3);box-shadow:0 0 70px rgba(192,38,211,.7)"></div>
-    <div style="position:absolute;left:290px;top:18px;width:220px;height:34px;border-radius:50%;border:4px solid rgba(240,171,252,.85);transform:rotate(-14deg)"></div>
-    <div style="position:relative;font-size:118px;font-weight:800;line-height:.92;letter-spacing:-.02em;color:#fff;text-shadow:0 8px 30px rgba(0,0,0,.35)">AGENT<br>UNIVERSE</div>
-    <div style="position:relative;font-size:96px;font-weight:800;line-height:1;letter-spacing:-.01em;margin-top:6px;background:linear-gradient(90deg,#60a5fa,#c084fc 50%,#f0abfc);-webkit-background-clip:text;color:transparent">2026</div>
-    <div style="display:inline-flex;align-items:center;gap:12px;margin-top:22px;background:#ef4444;color:#fff;font-size:36px;font-weight:800;letter-spacing:.05em;padding:12px 28px 12px 20px;border-radius:16px;box-shadow:0 12px 30px rgba(239,68,68,.45)">
-      <svg viewBox="0 0 24 24" width="38" height="38"><path d="M7 4.5v15l12.5-7.5z" fill="#fff"/></svg>FULL EVENT</div>
+  const face = 138;
+  return `<div class="canvas" style="width:1280px;height:720px;align-items:flex-start">
+  <img class="stage" src="${url("art/stage.png")}" style="height:240px;object-fit:cover;opacity:.6">
+  <div style="position:absolute;inset:0;background:radial-gradient(45% 65% at 78% 45%,rgba(168,85,247,.26),transparent 70%)"></div>
+  <div style="position:absolute;left:44px;top:34px"><div class="brand" style="font-size:66px;gap:12px"><img src="${url("art/logo.png")}"><div><b>INNOVATION</b><b>TECH COMMUNITY</b></div></div></div>
+  <div class="ms" style="position:absolute;right:44px;top:46px;font-size:30px"><i><span></span><span></span><span></span><span></span></i>Microsoft</div>
+  <div style="position:absolute;left:44px;top:128px;width:600px">
+    <img src="${url("art/wordmark.png")}" style="width:560px;margin-left:-16px">
+    <div style="display:flex;align-items:center;gap:16px;margin-top:10px">
+      <span style="display:inline-flex;align-items:center;gap:10px;background:#dc2626;color:#fff;font-size:34px;font-weight:800;letter-spacing:.05em;padding:11px 26px 11px 18px;border-radius:16px;box-shadow:0 10px 26px rgba(220,38,38,.35)"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M7 4.5v15l12.5-7.5z" fill="#fff"/></svg>FULL EVENT</span>
+      <span style="font-size:44px;font-weight:800;background:linear-gradient(90deg,#1d4ed8,#7c3aed 55%,#d946ef);-webkit-background-clip:text;color:transparent">2026</span></div>
+    <div style="font-size:50px;font-weight:800;line-height:1.06;margin-top:18px;color:#0b1630">${DELIVERED.length} Sessions on<br><span style="background:linear-gradient(90deg,#1d4ed8,#7c3aed 55%,#d946ef);-webkit-background-clip:text;color:transparent">AI Agents</span></div>
+    <div class="info" style="display:inline-flex;font-size:22px;height:58px;margin-top:22px"><div>${icon.calendar}14 NOVEMBER 2026</div><div>${icon.video}VIRTUAL EVENT</div></div>
   </div>
-  <div style="position:absolute;right:44px;top:92px;width:600px;display:flex;flex-direction:column;align-items:center;gap:8px">
-    ${rows.map((r) => `<div style="display:flex;gap:16px">${r.map((s) => `<div class="ring" style="width:${face}px;height:${face}px;padding:5px;background:linear-gradient(135deg,#60a5fa,#a855f7 55%,#f0abfc);box-shadow:0 10px 30px rgba(0,0,0,.4)"><img src="${url(s.photo)}" style="border:4px solid #1e1b6e"></div>`).join("")}</div>`).join("")}
-    <div style="margin-top:14px;font-size:30px;font-weight:800;color:#fff;letter-spacing:.14em">${DELIVERED.length} SPEAKERS <span style="color:#f0abfc">·</span> 1 DAY</div>
+  <div style="position:absolute;right:36px;top:112px;width:640px;display:flex;flex-direction:column;align-items:center;gap:6px">
+    ${rows.map((r) => `<div style="display:flex;gap:16px">${r.map((s) => `<div class="ring" style="width:${face}px;height:${face}px;padding:6px;box-shadow:0 12px 28px rgba(49,46,129,.22)"><img src="${url(s.photo)}" style="border-width:5px"></div>`).join("")}</div>`).join("")}
   </div>
+  <div style="position:absolute;right:62px;bottom:30px;width:590px;text-align:center;font-size:25px;font-weight:800;color:#fff;background:#0b1630;border-radius:999px;padding:13px 0;box-shadow:0 10px 26px rgba(11,22,48,.3)">${DELIVERED.length} expert speakers · <span style="background:linear-gradient(90deg,#93c5fd,#f0abfc);-webkit-background-clip:text;color:transparent">Talks &amp; live demos</span></div>
 </div>`;
 };
 
