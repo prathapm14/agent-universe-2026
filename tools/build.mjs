@@ -359,6 +359,29 @@ const thankYouLetter = () => {
 </div>`;
 };
 
+// YouTube thumbnail for the full recording (1280 × 720).
+const ytThumb = () => `<div class="canvas" style="width:1280px;height:720px;align-items:flex-start">
+  <img class="stage" src="${url("art/stage.png")}" style="height:230px;object-fit:cover;opacity:.55">
+  <div style="position:absolute;inset:0;background:radial-gradient(60% 70% at 100% 30%,rgba(168,85,247,.28),transparent 70%)"></div>
+  <div style="position:absolute;left:44px;top:34px" class="brand"><div class="brand" style="font-size:66px;gap:12px"><img src="${url("art/logo.png")}"><div><b>INNOVATION</b><b>TECH COMMUNITY</b></div></div></div>
+  <div class="ms" style="position:absolute;right:44px;top:46px;font-size:30px"><i><span></span><span></span><span></span><span></span></i>Microsoft</div>
+  <div style="position:absolute;left:44px;top:120px;width:640px">
+    <img src="${url("art/wordmark.png")}" style="width:520px;margin-left:-14px">
+    <div style="display:flex;align-items:center;gap:14px;margin-top:6px">
+      <span style="display:inline-flex;align-items:center;gap:10px;background:#dc2626;color:#fff;font-size:30px;font-weight:800;letter-spacing:.06em;padding:10px 22px;border-radius:14px;box-shadow:0 10px 24px rgba(220,38,38,.35)"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M8 5v14l11-7z" fill="#fff"/></svg>FULL EVENT</span>
+      <span style="font-size:34px;font-weight:800;color:#0b1630">2026</span></div>
+    <div style="font-size:50px;font-weight:800;line-height:1.05;margin-top:18px;color:#0b1630">${DELIVERED.length} Sessions on<br><span style="background:linear-gradient(90deg,#1d4ed8,#7c3aed 55%,#d946ef);-webkit-background-clip:text;color:transparent">AI Agents</span></div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;width:600px">
+      ${["Microsoft Foundry", "Copilot Studio", "MCP", "Agent Framework", "AI Security"].map((t, i) => `<span style="font-size:19px;font-weight:800;color:#fff;padding:7px 15px;border-radius:999px;background:${["#2563eb", "#7c3aed", "#c026d3", "#0ea5e9", "#f59e0b"][i]}">${t}</span>`).join("")}</div>
+  </div>
+  <div style="position:absolute;right:34px;top:150px;width:590px;display:grid;grid-template-columns:repeat(5,1fr);gap:22px 6px;justify-items:center">
+    ${DELIVERED.map((s) => `<div style="display:flex;flex-direction:column;align-items:center;width:114px">
+      <div class="ring" style="width:108px;height:108px;padding:4px"><img src="${url(s.photo)}" style="border-width:3px"></div>
+      <div style="font-size:15px;font-weight:800;margin-top:6px;text-align:center;line-height:1.1;color:#0b1630">${esc(s.name.replace(/ T$/, ""))}</div></div>`).join("")}
+  </div>
+  <div style="position:absolute;right:40px;bottom:30px;width:580px;text-align:center;font-size:24px;font-weight:800;color:#fff;background:#0b1630;border-radius:999px;padding:13px 0;box-shadow:0 10px 26px rgba(11,22,48,.3)">${DELIVERED.length} expert speakers · <span style="background:linear-gradient(90deg,#93c5fd,#f0abfc);-webkit-background-clip:text;color:transparent">Talks &amp; live demos</span></div>
+</div>`;
+
 const jobs = [];
 for (const s of sessions) {
   jobs.push([`tools/.cache/preview/portrait/${slug(s)}.png`, 1080, 1350, portrait(s)]);
@@ -377,6 +400,7 @@ jobs.push(["posters/agent-universe-agenda-portrait.png", 1080, 1350, agendaPost(
 jobs.push(["posters/agent-universe-thank-you-portrait.png", 1080, 1350, thankYou(1080, 1350)]);
 jobs.push(["posters/agent-universe-thank-you-story.png", 1080, 1920, thankYou(1080, 1920)]);
 jobs.push(["posters/agent-universe-thank-you-letter.png", 1080, 1350, thankYouLetter()]);
+jobs.push(["posters/agent-universe-youtube-thumbnail.png", 1280, 720, ytThumb()]);
 
 const only = process.argv[2];
 const browser = await chromium.launch({ channel: "chrome" });
