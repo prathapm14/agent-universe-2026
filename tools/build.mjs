@@ -247,7 +247,9 @@ const agendaPost = () => `<div class="canvas" style="width:1080px;height:1350px"
 </div>`;
 
 // Thank-you poster for after the event (4:5 feed and 9:16 story).
-const STACK = ["Microsoft Foundry", "Foundry IQ", "Copilot Studio", "Azure AI", "Microsoft Agent Framework", "Multi-agent systems", "MCP", "Azure Logic Apps", "Agent governance", "Red-teaming agents", "AI security & trust", "Enterprise AI agents"];
+const STACK = ["Microsoft Foundry", "Foundry IQ", "Copilot Studio", "Azure AI", "Microsoft Agent Framework", "Multi-agent systems", "MCP", "Azure Logic Apps", "Agent governance", "AI security & trust", "Enterprise AI agents"];
+// Vinit Metange could not join on the day, so the thank-you posters list the 10 sessions that ran.
+const DELIVERED = sessions.filter((s) => !/vinit/i.test(s.name));
 const TEAM = ["Prathap Reddy", "Divya Akula", "Sujith Sukumaran", "Lingaraj Benni"];
 const thankYou = (w, h) => {
   const tall = h / w > 1.5, k = tall ? 1.12 : 1;
@@ -263,11 +265,11 @@ const thankYou = (w, h) => {
   <div style="display:flex;gap:${16 * k}px;width:${tall ? 960 : 980}px;margin-top:${tall ? 34 : 20}px">
     ${stat("1K+", "watched live<br>on YouTube", "linear-gradient(90deg,#dc2626,#f97316)")}
     ${stat("500+", "attendees on<br>LinkedIn Live", "linear-gradient(90deg,#0a66c2,#2563eb)")}
-    ${stat(String(sessions.length), "expert speakers<br>&amp; sessions", "linear-gradient(90deg,#7c3aed,#d946ef)")}
+    ${stat(String(DELIVERED.length), "expert speakers<br>&amp; sessions", "linear-gradient(90deg,#7c3aed,#d946ef)")}
   </div>
   <div style="font-size:${17 * k}px;font-weight:800;letter-spacing:.3em;color:#1e2a55;margin-top:${tall ? 34 : 20}px">THANK YOU TO OUR SPEAKERS</div>
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;column-gap:${tall ? 12 : 8}px;row-gap:${tall ? 16 : 10}px;width:${tall ? 6 * 152 + 5 * 12 : 6 * 150 + 5 * 8}px;margin-top:${12 * k}px">
-    ${sessions.map((s) => `<div style="display:flex;flex-direction:column;align-items:center;width:${tall ? 152 : 150}px">
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;column-gap:${tall ? 12 : 8}px;row-gap:${tall ? 16 : 10}px;width:${tall ? 5 * 152 + 4 * 12 : 5 * 150 + 4 * 8}px;margin-top:${12 * k}px">
+    ${DELIVERED.map((s) => `<div style="display:flex;flex-direction:column;align-items:center;width:${tall ? 152 : 150}px">
       <div class="ring" style="width:${tall ? 104 : 80}px;height:${tall ? 104 : 80}px;padding:3px"><img src="${url(s.photo)}" style="border-width:3px"></div>
       <div style="font-size:${tall ? 15 : 13}px;font-weight:800;margin-top:${tall ? 6 : 4}px;text-align:center;line-height:1.15;white-space:nowrap">${esc(s.name)}</div></div>`).join("")}
   </div>
@@ -284,6 +286,37 @@ const thankYou = (w, h) => {
   ${tall ? `<div class="foot" style="bottom:36px"><div class="link" style="font-size:22px;padding:16px 34px">#AgentUniverse2026 · <em>innovationtechcommunity.com</em></div></div>` : ""}
 </div>`;
 };
+
+// Thank-you letter: text only, no photos.
+const thankYouLetter = () => `<div class="canvas" style="width:1080px;height:1350px">
+  <img class="stage" src="${url("art/stage.png")}" style="height:200px;object-fit:cover;opacity:.75">
+  ${header(66, 32)}
+  ${wordmark(380, 92)}
+  <div class="card" style="width:960px;margin-top:14px;padding:38px 54px 34px;border-radius:30px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline">
+      <div style="font-size:44px;font-weight:800;letter-spacing:-.01em;background:linear-gradient(90deg,#1d4ed8,#7c3aed 55%,#d946ef);-webkit-background-clip:text;color:transparent">A thank-you letter</div>
+      <div style="font-size:16px;font-weight:700;color:#4b5875;letter-spacing:.08em">14 NOVEMBER 2026</div></div>
+    <div style="height:4px;width:120px;border-radius:4px;margin:14px 0 22px;background:linear-gradient(90deg,#1d4ed8,#a855f7,#ec4899)"></div>
+    <div style="font-size:19.5px;font-weight:500;line-height:1.55;color:#1e2a55">
+      <p style="font-weight:800;margin-bottom:12px">Dear Agent Universe community,</p>
+      <p style="margin-bottom:12px">Thank you for making <b style="font-weight:800;color:#4f46e5">Agent Universe 2026</b> such a special day! More than <b style="font-weight:800">1,000 of you watched live on YouTube</b> and <b style="font-weight:800">500+ joined us on LinkedIn Live</b>, from India and around the world.</p>
+      <p style="margin-bottom:12px">Across <b style="font-weight:800">${DELIVERED.length} sessions</b>, our speakers took us from idea to agent: building enterprise agents with Microsoft Foundry, Foundry IQ and Copilot Studio; securing autonomous AI with the right harness, governance and enterprise-grade trust; designing business capabilities for agents with MCP; rethinking ERP workflows with Azure Logic Apps; building proactive AI teammates; and building smarter agents with Microsoft Agent Framework.</p>
+      <p style="margin-bottom:12px">Every question in the chat, every share and every hour you spent with us is what makes this community grow. The recordings are on our YouTube channel, and if you registered, don't forget to claim your <b style="font-weight:800">Agent Universe 2026 stamp</b> in your ITC Learning Passport.</p>
+      <p>See you at the next event. Learn together, build together, grow together! 💜</p>
+    </div>
+    <div style="margin-top:20px;padding-top:16px;border-top:2px solid #e4e8f6">
+      <div style="font-size:14px;font-weight:800;letter-spacing:.24em;color:#4f46e5">OUR HEARTFELT THANKS TO OUR SPEAKERS</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);grid-auto-flow:column;grid-template-rows:repeat(5,auto);gap:6px 18px;margin-top:10px;font-size:17px;font-weight:700;color:#0b1630">
+        ${DELIVERED.map((s) => `<div>• ${esc(s.name)}</div>`).join("")}</div>
+    </div>
+    <div style="margin-top:20px">
+      <div style="font-family:'Snell Roundhand','Segoe Script',cursive;font-size:36px;font-weight:700;color:#4f46e5;line-height:1">Sincerely,</div>
+      <div style="font-size:20px;font-weight:800;letter-spacing:.05em;margin-top:6px">INNOVATION TECH COMMUNITY TEAM</div>
+      <div style="font-size:17px;font-weight:700;color:#4b5875;margin-top:4px">${TEAM.join("  ·  ")}</div>
+    </div>
+  </div>
+  <div class="foot" style="bottom:30px"><div class="link" style="font-size:20px;padding:14px 30px">#AgentUniverse2026 · <em>innovationtechcommunity.com</em></div></div>
+</div>`;
 
 const jobs = [];
 for (const s of sessions) {
@@ -302,6 +335,7 @@ jobs.push(["posters/agent-universe-agenda-story.png", 1080, 1920, agenda(1080, 1
 jobs.push(["posters/agent-universe-agenda-portrait.png", 1080, 1350, agendaPost()]);
 jobs.push(["posters/agent-universe-thank-you-portrait.png", 1080, 1350, thankYou(1080, 1350)]);
 jobs.push(["posters/agent-universe-thank-you-story.png", 1080, 1920, thankYou(1080, 1920)]);
+jobs.push(["posters/agent-universe-thank-you-letter.png", 1080, 1350, thankYouLetter()]);
 
 const only = process.argv[2];
 const browser = await chromium.launch({ channel: "chrome" });
