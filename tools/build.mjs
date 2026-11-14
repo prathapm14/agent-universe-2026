@@ -287,36 +287,77 @@ const thankYou = (w, h) => {
 </div>`;
 };
 
-// Thank-you letter: text only, no photos.
-const thankYouLetter = () => `<div class="canvas" style="width:1080px;height:1350px">
-  <img class="stage" src="${url("art/stage.png")}" style="height:200px;object-fit:cover;opacity:.75">
-  ${header(66, 32)}
-  ${wordmark(380, 92)}
-  <div class="card" style="width:960px;margin-top:14px;padding:38px 54px 34px;border-radius:30px">
-    <div style="display:flex;justify-content:space-between;align-items:baseline">
-      <div style="font-size:44px;font-weight:800;letter-spacing:-.01em;background:linear-gradient(90deg,#1d4ed8,#7c3aed 55%,#d946ef);-webkit-background-clip:text;color:transparent">A thank-you letter</div>
-      <div style="font-size:16px;font-weight:700;color:#4b5875;letter-spacing:.08em">14 NOVEMBER 2026</div></div>
-    <div style="height:4px;width:120px;border-radius:4px;margin:14px 0 22px;background:linear-gradient(90deg,#1d4ed8,#a855f7,#ec4899)"></div>
-    <div style="font-size:19.5px;font-weight:500;line-height:1.55;color:#1e2a55">
-      <p style="font-weight:800;margin-bottom:12px">Dear Agent Universe community,</p>
-      <p style="margin-bottom:12px">Thank you for making <b style="font-weight:800;color:#4f46e5">Agent Universe 2026</b> such a special day! More than <b style="font-weight:800">1,000 of you watched live on YouTube</b> and <b style="font-weight:800">500+ joined us on LinkedIn Live</b>, from India and around the world.</p>
-      <p style="margin-bottom:12px">Across <b style="font-weight:800">${DELIVERED.length} sessions</b>, our speakers took us from idea to agent: building enterprise agents with Microsoft Foundry, Foundry IQ and Copilot Studio; securing autonomous AI with the right harness, governance and enterprise-grade trust; designing business capabilities for agents with MCP; rethinking ERP workflows with Azure Logic Apps; building proactive AI teammates; and building smarter agents with Microsoft Agent Framework.</p>
-      <p style="margin-bottom:12px">Every question in the chat, every share and every hour you spent with us is what makes this community grow. The recordings are on our YouTube channel, and if you registered, don't forget to claim your <b style="font-weight:800">Agent Universe 2026 stamp</b> in your ITC Learning Passport.</p>
-      <p>See you at the next event. Learn together, build together, grow together! 💜</p>
+// Thank-you letter (no photos), with the Agent Universe passport stamp and the ITC Learning Passport.
+const stampSvg = (size, c = "#4338ca") => `<svg viewBox="0 0 120 120" width="${size}" height="${size}">
+  <defs><filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4"/></filter></defs>
+  <g filter="url(#ink)" font-family="J, sans-serif">
+    <circle cx="60" cy="60" r="54" fill="none" stroke="${c}" stroke-width="3"/><circle cx="60" cy="60" r="46" fill="none" stroke="${c}" stroke-width="1.2" stroke-dasharray="2 2.5"/>
+    <text x="60" y="38" text-anchor="middle" font-size="7" font-weight="800" fill="${c}" letter-spacing="2">ATTENDEE</text>
+    <line x1="30" y1="44" x2="90" y2="44" stroke="${c}" stroke-width="1"/>
+    <text x="60" y="58" text-anchor="middle" font-size="9.5" font-weight="800" fill="${c}">AGENT UNIVERSE</text>
+    <text x="60" y="69" text-anchor="middle" font-size="9.5" font-weight="800" fill="${c}">2026</text>
+    <line x1="30" y1="75" x2="90" y2="75" stroke="${c}" stroke-width="1"/>
+    <text x="60" y="85" text-anchor="middle" font-size="7" font-weight="800" fill="${c}" letter-spacing="1">NOV 2026</text>
+    <text x="60" y="94" text-anchor="middle" font-size="6" font-weight="700" fill="${c}" letter-spacing="1">WORLDWIDE</text></g></svg>`;
+const passportCover = (w) => `<div style="position:relative;width:${w}px;height:${w / 0.72}px;border-radius:6px 12px 12px 6px;background:linear-gradient(160deg,#0b1630,#1d3a8a);color:#d9c47e;display:flex;flex-direction:column;align-items:center;text-align:center;padding:${w * 0.1}px ${w * 0.08}px;box-shadow:inset 5px 0 10px rgba(0,0,0,.45),0 14px 30px rgba(11,22,48,.35);transform:rotate(-6deg)">
+  <span style="position:absolute;inset:6px;border:1.2px solid rgba(217,196,126,.45);border-radius:inherit"></span>
+  <span style="font-size:${w * 0.05}px;letter-spacing:.2em;font-weight:700">INNOVATION TECH COMMUNITY</span>
+  <img src="${url("art/logo.png")}" style="width:${w * 0.36}px;height:${w * 0.36}px;margin:${w * 0.1}px 0 ${w * 0.08}px;filter:drop-shadow(0 0 6px rgba(217,196,126,.4))">
+  <span style="font-size:${w * 0.1}px;letter-spacing:.16em;font-weight:800;line-height:1.25">LEARNING<br>PASSPORT</span>
+  <span style="margin-top:auto;font-size:${w * 0.045}px;letter-spacing:.26em;opacity:.8">LEARN · BUILD · GROW</span></div>`;
+const statIcon = {
+  yt: `<svg viewBox="0 0 24 24" width="44" height="44"><rect x="1.5" y="4.5" width="21" height="15" rx="4.5" fill="#ef4444"/><path d="M10 9v6l5.2-3z" fill="#fff"/></svg>`,
+  li: `<svg viewBox="0 0 24 24" width="44" height="44"><rect x="1.5" y="1.5" width="21" height="21" rx="4" fill="#0a66c2"/><path d="M6.3 9.6h2.6v8H6.3zM7.6 5.6a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3M10.7 9.6h2.5v1.1c.4-.7 1.3-1.3 2.6-1.3 2.7 0 3.2 1.7 3.2 4v4.2h-2.6v-3.7c0-.9 0-2-1.3-2s-1.5 1-1.5 2v3.7h-2.6z" fill="#fff"/></svg>`,
+  mic: `<svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-linecap="round"><rect x="8.5" y="2.5" width="7" height="12" rx="3.5" fill="#ede9fe"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3.5M8.5 21.5h7"/></svg>`,
+  globe: `<svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="#c026d3" stroke-width="2"><circle cx="12" cy="12" r="9.5" fill="#fae8ff"/><path d="M2.5 12h19M12 2.5c3 3.2 3 15.8 0 19M12 2.5c-3 3.2-3 15.8 0 19"/></svg>`,
+};
+const thankYouLetter = () => {
+  const grad = "linear-gradient(90deg,#1d4ed8,#7c3aed 50%,#c026d3)";
+  const stat = (ic, v, l) => `<div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 8px">${statIcon[ic]}
+    <div style="font-size:30px;font-weight:800;margin-top:6px;background:${grad};-webkit-background-clip:text;color:transparent;line-height:1.1">${v}</div>
+    <div style="font-size:14px;font-weight:700;color:#1e2a55;line-height:1.3;margin-top:3px">${l}</div></div>`;
+  const sep = `<div style="width:1.5px;align-self:stretch;background:linear-gradient(180deg,transparent,#c7d2fe,transparent)"></div>`;
+  return `<div class="canvas" style="width:1080px;height:1350px;align-items:stretch;padding:0 56px">
+  <img class="stage" src="${url("art/stage.png")}" style="height:420px;object-fit:cover;opacity:.16">
+  <div style="position:absolute;left:0;right:0;bottom:0;height:16px;background:linear-gradient(90deg,#1d4ed8,#7c3aed,#c026d3,#ec4899)"></div>
+  <div style="position:relative;display:flex;justify-content:space-between;align-items:center;margin-top:40px">
+    <div class="brand" style="font-size:96px;gap:18px"><img src="${url("art/logo.png")}"><div style="border-left:2px solid #1e2a55;padding-left:18px"><b style="font-size:.31em">INNOVATION</b><b style="font-size:.25em;font-weight:700">TECH COMMUNITY</b></div></div>
+    <div class="ms" style="font-size:30px"><i><span></span><span></span><span></span><span></span></i>Microsoft</div></div>
+  <div style="position:relative;display:flex;align-items:center;margin-top:6px">
+    <img src="${url("art/wordmark.png")}" style="width:330px;flex:none;margin-left:-10px">
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <div style="font-family:'Snell Roundhand','Segoe Script',cursive;font-size:96px;font-weight:700;line-height:1.05;background:linear-gradient(90deg,#c026d3,#7c3aed);-webkit-background-clip:text;color:transparent;padding:0 10px">Thank You!</div>
+      <div style="display:flex;align-items:center;gap:14px;font-size:19px;font-weight:800;letter-spacing:.24em;color:#1e2a55;margin-top:2px"><span style="width:70px;height:2px;background:#1e2a55"></span>FOR MAKING<span style="width:70px;height:2px;background:#1e2a55"></span></div>
+      <div style="font-size:64px;font-weight:800;line-height:1.02;letter-spacing:-.01em;margin-top:6px;background:${grad};-webkit-background-clip:text;color:transparent">AGENT UNIVERSE<br>2026</div>
+      <div style="font-size:14.5px;font-weight:700;color:#1e2a55;margin-top:10px">— Build · Learn · Connect · Innovate: a global virtual day of Agentic AI —</div>
+    </div></div>
+  <div style="position:relative;font-size:18.5px;font-weight:500;line-height:1.5;color:#1e2a55;margin-top:24px">
+    <p style="font-weight:800;margin-bottom:10px">Dear Attendees, Speakers, Volunteers &amp; Well-wishers,</p>
+    <p style="margin-bottom:9px">We are thrilled to share that <b style="font-weight:800;color:#c026d3">Agent Universe 2026</b> was a tremendous success! Your overwhelming response, energy and active participation in the live chat made this day truly special.</p>
+    <p style="margin-bottom:9px">With <b style="font-weight:800">1,000+ viewers live on YouTube</b> and <b style="font-weight:800">500+ attendees on LinkedIn Live</b>, joining from across India and around the world, Agent Universe brought together a vibrant community of developers, architects, makers and technology leaders.</p>
+    <p style="margin-bottom:9px">Across <b style="font-weight:800">${DELIVERED.length} sessions and live demos</b>, we went from idea to agent: Microsoft Foundry, Foundry IQ, Copilot Studio, MCP, Azure Logic Apps, Microsoft Agent Framework, multi-agent governance and AI security.</p>
+    <p style="margin-bottom:9px">A heartfelt thank you to our speakers, <b style="font-weight:700">${DELIVERED.map((s) => esc(s.name)).join(", ").replace(/, ([^,]*)$/, " and $1")}</b>, and to our hosts and volunteers. Your knowledge and dedication were the driving force behind this day.</p>
+    <p style="font-weight:800;color:#c026d3">Here's to the agents we built, the knowledge we shared, and the future we are building together!</p>
+  </div>
+  <div class="card" style="position:relative;display:flex;align-items:center;margin-top:20px;padding:18px 10px;border-radius:24px">
+    ${stat("yt", "1K+", "Watched live<br>on YouTube")}${sep}${stat("li", "500+", "Attendees on<br>LinkedIn Live")}${sep}${stat("mic", String(DELIVERED.length), "Expert speakers<br>&amp; sessions")}${sep}${stat("globe", "Global", "A day of<br>Agentic AI")}
+  </div>
+  <div style="position:relative;display:flex;align-items:flex-end;justify-content:space-between;margin-top:20px">
+    <div>
+      <div style="font-size:16px;font-weight:700;color:#1e2a55">With Regards,</div>
+      <div style="font-family:'Snell Roundhand','Segoe Script',cursive;font-size:38px;font-weight:700;color:#1e2a55;line-height:1.15">Innovation Tech Community Team</div>
+      <div style="font-size:15px;font-weight:700;color:#4b5875;margin-top:4px">${TEAM.join("  ·  ")}</div>
+      <div style="font-size:13px;font-weight:800;letter-spacing:.28em;color:#1e2a55;margin-top:10px">BUILD · LEARN · CONNECT · INNOVATE</div>
     </div>
-    <div style="margin-top:20px;padding-top:16px;border-top:2px solid #e4e8f6">
-      <div style="font-size:14px;font-weight:800;letter-spacing:.24em;color:#4f46e5">OUR HEARTFELT THANKS TO OUR SPEAKERS</div>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);grid-auto-flow:column;grid-template-rows:repeat(5,auto);gap:6px 18px;margin-top:10px;font-size:17px;font-weight:700;color:#0b1630">
-        ${DELIVERED.map((s) => `<div>• ${esc(s.name)}</div>`).join("")}</div>
-    </div>
-    <div style="margin-top:20px">
-      <div style="font-family:'Snell Roundhand','Segoe Script',cursive;font-size:36px;font-weight:700;color:#4f46e5;line-height:1">Sincerely,</div>
-      <div style="font-size:20px;font-weight:800;letter-spacing:.05em;margin-top:6px">INNOVATION TECH COMMUNITY TEAM</div>
-      <div style="font-size:17px;font-weight:700;color:#4b5875;margin-top:4px">${TEAM.join("  ·  ")}</div>
+    <div style="display:flex;align-items:center;gap:6px;margin-right:6px">
+      ${passportCover(132)}
+      <div style="transform:rotate(-8deg);margin-left:-14px">${stampSvg(162)}</div>
     </div>
   </div>
-  <div class="foot" style="bottom:30px"><div class="link" style="font-size:20px;padding:14px 30px">#AgentUniverse2026 · <em>innovationtechcommunity.com</em></div></div>
+  <div style="position:relative;display:flex;justify-content:flex-end;margin-top:8px">
+    <div style="font-size:13.5px;font-weight:800;color:#4338ca;text-align:right;line-height:1.35">Registered? Claim your Agent Universe 2026 stamp<br>in your Learning Passport · innovationtechcommunity.com</div></div>
 </div>`;
+};
 
 const jobs = [];
 for (const s of sessions) {
