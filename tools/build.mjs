@@ -246,6 +246,45 @@ const agendaPost = () => `<div class="canvas" style="width:1080px;height:1350px"
   <div class="foot" style="bottom:24px"><div class="link" style="font-size:20px;padding:14px 30px">Register free · <em>${EVENT.link}</em></div></div>
 </div>`;
 
+// Thank-you poster for after the event (4:5 feed and 9:16 story).
+const STACK = ["Microsoft Foundry", "Foundry IQ", "Copilot Studio", "Azure AI", "Microsoft Agent Framework", "Multi-agent systems", "MCP", "Azure Logic Apps", "Agent governance", "Red-teaming agents", "AI security & trust", "Enterprise AI agents"];
+const TEAM = ["Prathap Reddy", "Divya Akula", "Sujith Sukumaran", "Lingaraj Benni"];
+const thankYou = (w, h) => {
+  const tall = h / w > 1.5, k = tall ? 1.12 : 1;
+  const stat = (v, l, c) => `<div class="card" style="flex:1;padding:${tall ? 26 : 18}px 12px;border-radius:26px;text-align:center">
+    <div style="font-size:${58 * k}px;font-weight:800;line-height:1;background:${c};-webkit-background-clip:text;color:transparent">${v}</div>
+    <div style="font-size:${17 * k}px;font-weight:700;color:#4b5875;margin-top:${8 * k}px;line-height:1.3">${l}</div></div>`;
+  return `<div class="canvas" style="width:${w}px;height:${h}px">
+  <img class="stage" src="${url("art/stage.png")}" style="height:${tall ? 330 : 230}px;object-fit:cover;opacity:.8">
+  ${header(tall ? 84 : 72, tall ? 40 : 34)}
+  ${wordmark(tall ? 560 : 420, tall ? 150 : 100)}
+  <div style="font-size:${(tall ? 150 : 118)}px;font-weight:800;line-height:1;letter-spacing:-.02em;margin-top:${tall ? 26 : 8}px;background:linear-gradient(90deg,#1d4ed8,#7c3aed 55%,#d946ef);-webkit-background-clip:text;color:transparent;padding-bottom:6px">THANK YOU!</div>
+  <div style="font-size:${24 * k}px;font-weight:700;color:#1e2a55;margin-top:${6 * k}px;text-align:center;line-height:1.35">for making <b style="font-weight:800;color:#4f46e5">Agent Universe 2026</b> a huge success 💜</div>
+  <div style="display:flex;gap:${16 * k}px;width:${tall ? 960 : 980}px;margin-top:${tall ? 34 : 20}px">
+    ${stat("1K+", "watched live<br>on YouTube", "linear-gradient(90deg,#dc2626,#f97316)")}
+    ${stat("500+", "attendees on<br>LinkedIn Live", "linear-gradient(90deg,#0a66c2,#2563eb)")}
+    ${stat(String(sessions.length), "expert speakers<br>&amp; sessions", "linear-gradient(90deg,#7c3aed,#d946ef)")}
+  </div>
+  <div style="font-size:${17 * k}px;font-weight:800;letter-spacing:.3em;color:#1e2a55;margin-top:${tall ? 34 : 20}px">THANK YOU TO OUR SPEAKERS</div>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;column-gap:${tall ? 12 : 8}px;row-gap:${tall ? 16 : 10}px;width:${tall ? 6 * 152 + 5 * 12 : 6 * 150 + 5 * 8}px;margin-top:${12 * k}px">
+    ${sessions.map((s) => `<div style="display:flex;flex-direction:column;align-items:center;width:${tall ? 152 : 150}px">
+      <div class="ring" style="width:${tall ? 104 : 80}px;height:${tall ? 104 : 80}px;padding:3px"><img src="${url(s.photo)}" style="border-width:3px"></div>
+      <div style="font-size:${tall ? 15 : 13}px;font-weight:800;margin-top:${tall ? 6 : 4}px;text-align:center;line-height:1.15;white-space:nowrap">${esc(s.name)}</div></div>`).join("")}
+  </div>
+  <div style="font-size:${17 * k}px;font-weight:800;letter-spacing:.3em;color:#1e2a55;margin-top:${tall ? 34 : 20}px">TODAY WE COVERED</div>
+  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:${9 * k}px;width:${tall ? 960 : 1000}px;margin-top:${12 * k}px">
+    ${STACK.map((t, i) => `<span style="font-size:${16 * k}px;font-weight:800;color:#fff;padding:${8 * k}px ${16 * k}px;border-radius:999px;background:${["#2563eb", "#7c3aed", "#c026d3", "#0ea5e9", "#f59e0b", "#10b981"][i % 6]}">${esc(t)}</span>`).join("")}
+  </div>
+  <div class="card" style="position:absolute;left:50%;transform:translateX(-50%);bottom:${tall ? 110 : 34}px;width:${tall ? 960 : 1000}px;padding:${tall ? 26 : 18}px 30px;border-radius:28px;text-align:center">
+    <div style="font-family:'Snell Roundhand','Segoe Script',cursive;font-size:${36 * k}px;font-weight:700;color:#4f46e5;line-height:1">Sincerely,</div>
+    <div style="font-size:${22 * k}px;font-weight:800;letter-spacing:.06em;color:#0b1630;margin-top:${8 * k}px">INNOVATION TECH COMMUNITY TEAM</div>
+    <div style="font-size:${18 * k}px;font-weight:700;color:#4b5875;margin-top:${6 * k}px">${TEAM.join("  ·  ")}</div>
+  </div>
+  <img class="cat" src="${url("art/itc-cat-wave.webp")}" style="width:${tall ? 230 : 170}px;right:${tall ? 30 : 14}px;bottom:${tall ? 250 : 150}px">
+  ${tall ? `<div class="foot" style="bottom:36px"><div class="link" style="font-size:22px;padding:16px 34px">#AgentUniverse2026 · <em>innovationtechcommunity.com</em></div></div>` : ""}
+</div>`;
+};
+
 const jobs = [];
 for (const s of sessions) {
   jobs.push([`tools/.cache/preview/portrait/${slug(s)}.png`, 1080, 1350, portrait(s)]);
@@ -261,6 +300,8 @@ jobs.push(["posters/agent-universe-lineup-story.png", 1080, 1920, lineup(1080, 1
 jobs.push(["posters/agent-universe-lineup-landscape.png", 1600, 900, lineup(1600, 900, 6)]);
 jobs.push(["posters/agent-universe-agenda-story.png", 1080, 1920, agenda(1080, 1920)]);
 jobs.push(["posters/agent-universe-agenda-portrait.png", 1080, 1350, agendaPost()]);
+jobs.push(["posters/agent-universe-thank-you-portrait.png", 1080, 1350, thankYou(1080, 1350)]);
+jobs.push(["posters/agent-universe-thank-you-story.png", 1080, 1920, thankYou(1080, 1920)]);
 
 const only = process.argv[2];
 const browser = await chromium.launch({ channel: "chrome" });
